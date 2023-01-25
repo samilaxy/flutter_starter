@@ -113,9 +113,8 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
 
+class MyWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container();
