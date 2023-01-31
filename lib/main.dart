@@ -13,7 +13,20 @@ class MyMancho extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-          appBar: AppBar(title: Text('MyManchodfd')),
-        ));
+            appBar: AppBar(title: const Text('MyManchodfd')),
+            body: Container(
+              decoration: const BoxDecoration(
+                  image: DecorationImage(
+                image: AssetImage('assets/macho.jpg'),
+                fit: BoxFit.cover,
+              )),
+              child: Center(
+                child: Container(
+                    decoration: const BoxDecoration(
+                      color: Colors.black54,
+                    ),
+                    child: const Text('No Pain, No Gain.')),
+              ),
+            )));
   }
 }
