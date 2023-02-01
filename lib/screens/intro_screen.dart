@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../shared/menu_drawer.dart';
 
 class IntroScreen extends StatelessWidget {
   const IntroScreen({Key? key}) : super(key: key);
@@ -11,6 +12,7 @@ class IntroScreen extends StatelessWidget {
               const Text('MyManchodf', style: TextStyle(color: Colors.black)),
           backgroundColor: Colors.white30,
         ),
+        drawer: const MenuDrawer(),
         body: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
