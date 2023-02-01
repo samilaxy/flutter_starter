@@ -13,6 +13,10 @@ class IntroScreen extends StatelessWidget {
           backgroundColor: Colors.white30,
         ),
         drawer: const MenuDrawer(),
+        bottomNavigationBar: BottomNavigationBar(items: [
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: '')
+        ]),
         body: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
