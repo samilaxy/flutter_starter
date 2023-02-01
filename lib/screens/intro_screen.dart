@@ -13,22 +13,7 @@ class IntroScreen extends StatelessWidget {
           backgroundColor: Colors.white30,
         ),
         drawer: const MenuDrawer(),
-        bottomNavigationBar: BottomNavigationBar(
-            onTap: (int index) {
-              switch (index) {
-                case 0:
-                  Navigator.pushNamed(context, '/');
-                  break;
-                case 1:
-                  Navigator.pushNamed(context, '/bmi');
-                  break;
-              }
-            },
-            items: [
-              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.monitor_weight), label: 'BMI')
-            ]),
+        bottomNavigationBar: MenuBottom(),
         body: Container(
           decoration: const BoxDecoration(
               image: DecorationImage(
