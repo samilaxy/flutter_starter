@@ -22,6 +22,6 @@ class MyMancho extends StatelessWidget {
           '/': (context) => const IntroScreen(),
           '/bmi': (context) => const BmiScreen(),
         },
-        home: const IntroScreen());
+        initialRoute: '/');
   }
 }
