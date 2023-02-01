@@ -11,7 +11,11 @@ class MyMancho extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-        debugShowCheckedModeBanner: false, home: IntroScreen());
+    return MaterialApp(
+        theme: ThemeData(
+            colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: Colors.white54,
+        )),
+        home: const IntroScreen());
   }
 }
