@@ -9,7 +9,7 @@ class IntroScreen extends StatelessWidget {
         appBar: AppBar(
           title:
               const Text('MyManchodf', style: TextStyle(color: Colors.black)),
-          backgroundColor: Colors.white54,
+          backgroundColor: Colors.white30,
         ),
         body: Container(
           decoration: const BoxDecoration(
@@ -22,7 +22,7 @@ class IntroScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(15),
                 decoration: const BoxDecoration(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: Colors.white60,
+                  color: Colors.white70,
                 ),
                 child: const Text(
                   'No Pain, No Gain.',
