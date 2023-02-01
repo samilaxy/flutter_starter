@@ -22,8 +22,9 @@ class MyMancho extends StatelessWidget {
               )),
               child: Center(
                 child: Container(
+                    padding: const EdgeInsets.all(15),
                     decoration: const BoxDecoration(
-                      color: Colors.black54,
+                      color: Colors.white60,
                     ),
                     child: const Text('No Pain, No Gain.')),
               ),
