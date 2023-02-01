@@ -13,7 +13,11 @@ class MyMancho extends StatelessWidget {
     return MaterialApp(
         debugShowCheckedModeBanner: false,
         home: Scaffold(
-            appBar: AppBar(title: const Text('MyManchodfd')),
+            appBar: AppBar(
+              title: const Text('MyManchodfd',
+                  style: TextStyle(color: Colors.black)),
+              backgroundColor: Colors.white54,
+            ),
             body: Container(
               decoration: const BoxDecoration(
                   image: DecorationImage(
@@ -24,6 +28,7 @@ class MyMancho extends StatelessWidget {
                 child: Container(
                     padding: const EdgeInsets.all(15),
                     decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
                       color: Colors.white60,
                     ),
                     child: const Text('No Pain, No Gain.')),
