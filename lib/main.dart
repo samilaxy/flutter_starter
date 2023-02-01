@@ -31,7 +31,15 @@ class MyMancho extends StatelessWidget {
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                       color: Colors.white60,
                     ),
-                    child: const Text('No Pain, No Gain.')),
+                    child: const Text(
+                      'No Pain, No Gain.',
+                      style: TextStyle(fontSize: 15, shadows: [
+                        Shadow(
+                            offset: Offset(1.0, 1.0),
+                            blurRadius: 2.0,
+                            color: Colors.grey)
+                      ]),
+                    )),
               ),
             )));
   }
