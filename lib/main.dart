@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/screens/bmi_screen.dart';
 import 'screens/intro_screen.dart';
 
 void main() {
@@ -17,6 +18,10 @@ class MyMancho extends StatelessWidget {
             colorScheme: ColorScheme.fromSwatch().copyWith(
           secondary: Colors.green,
         )),
+        routes: {
+          '/': (context) => const IntroScreen(),
+          '/bmi': (context) => const BmiScreen(),
+        },
         home: const IntroScreen());
   }
 }
