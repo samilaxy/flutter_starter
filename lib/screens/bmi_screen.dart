@@ -19,6 +19,8 @@ class _BmiScreenState extends State<BmiScreen> {
   double? heighgt;
   double? weight;
   late List<bool> isSelected;
+  String heightMessage = '';
+  String weightMessage = '';
   @override
   void initState() {
     isSelected = [isMetric, isImperial];
@@ -27,6 +29,10 @@ class _BmiScreenState extends State<BmiScreen> {
 
   @override
   Widget build(BuildContext context) {
+    heightMessage =
+        'Please input your height ${(isMetric) ? 'meters' : 'inches'}';
+    weightMessage =
+        'Please input your weight ${(isMetric) ? 'kilos' : 'pounds'}';
     return Scaffold(
         appBar: AppBar(
           title: const Text('BMI Calculator',
@@ -46,8 +52,18 @@ class _BmiScreenState extends State<BmiScreen> {
                   child: Text('Imperial', style: TextStyle(fontSize: fontSize)))
             ], isSelected: isSelected, onPressed: toggleMeasure),
             TextField(
-                controller: txtHeight, keyboardType: TextInputType.number),
-            TextField(controller: txtWeight, keyboardType: TextInputType.number)
+                controller: txtHeight,
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(hintText: heightMessage)),
+            TextField(
+                controller: txtWeight,
+                keyboardType: TextInputType.number,
+                decoration: InputDecoration(hintText: weightMessage)),
+            ElevatedButton(
+                onPressed: () {},
+                child: Text('Calculate BMI',
+                    style: TextStyle(fontSize: fontSize))),
+            Text(result, style: TextStyle(fontSize: fontSize))
           ],
         ));
   }
@@ -63,5 +79,17 @@ class _BmiScreenState extends State<BmiScreen> {
     setState(() {
       isSelected = [isImperial, isImperial];
     });
+  }
+
+  void findBMI() {
+    double bmi = 0;
+    double height = double.tryParse(txtHeight.text) ?? 0;
+    double weight = double.tryParse(txtWeight.text) ?? 0;
+
+    if (isMetric) {
+      bmi = weight / (height * height);
+    } else {
+      bmi = weight * 703 / (height * height);
+    }
   }
 }
