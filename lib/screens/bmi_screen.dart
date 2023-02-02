@@ -2,20 +2,66 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter/shared/menu_bottom.dart';
 import 'package:flutter_starter/shared/menu_drawer.dart';
 
-class BmiScreen extends StatelessWidget {
+class BmiScreen extends StatefulWidget {
   const BmiScreen({super.key});
+
+  @override
+  State<BmiScreen> createState() => _BmiScreenState();
+}
+
+class _BmiScreenState extends State<BmiScreen> {
+  final TextEditingController txtHeight = TextEditingController();
+  final TextEditingController txtWeight = TextEditingController();
+  final double fontSize = 18;
+  String result = '';
+  bool isMetric = true;
+  bool isImperial = false;
+  double? heighgt;
+  double? weight;
+  late List<bool> isSelected;
+  @override
+  void initState() {
+    isSelected = [isMetric, isImperial];
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title:
-            const Text('BMI Calculator', style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.white30,
-      ),
-      drawer: const MenuDrawer(),
-      bottomNavigationBar: const MenuBottom(),
-      body: const Center(child: FlutterLogo()),
-    );
+        appBar: AppBar(
+          title: const Text('BMI Calculator',
+              style: TextStyle(color: Colors.black)),
+          backgroundColor: Colors.white30,
+        ),
+        drawer: const MenuDrawer(),
+        bottomNavigationBar: const MenuBottom(),
+        body: Column(
+          children: [
+            ToggleButtons(children: [
+              Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Text('Metric', style: TextStyle(fontSize: fontSize))),
+              Padding(
+                  padding: EdgeInsets.symmetric(horizontal: 16),
+                  child: Text('Imperial', style: TextStyle(fontSize: fontSize)))
+            ], isSelected: isSelected, onPressed: toggleMeasure),
+            TextField(
+                controller: txtHeight, keyboardType: TextInputType.number),
+            TextField(controller: txtWeight, keyboardType: TextInputType.number)
+          ],
+        ));
+  }
+
+  void toggleMeasure(value) {
+    if (value == 0) {
+      isMetric = true;
+      isImperial = false;
+    } else {
+      isMetric = false;
+      isImperial = true;
+    }
+    setState(() {
+      isSelected = [isImperial, isImperial];
+    });
   }
 }
