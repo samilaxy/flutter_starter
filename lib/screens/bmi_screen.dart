@@ -14,6 +14,7 @@ class _BmiScreenState extends State<BmiScreen> {
   final TextEditingController txtWeight = TextEditingController();
   final double fontSize = 18;
   String result = '';
+  bool validate = false;
   bool isMetric = true;
   bool isImperial = false;
   double? heighgt;
@@ -57,9 +58,13 @@ class _BmiScreenState extends State<BmiScreen> {
                           style: TextStyle(fontSize: fontSize)))
                 ], isSelected: isSelected, onPressed: toggleMeasure),
                 TextField(
-                    controller: txtHeight,
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(hintText: heightMessage)),
+                  controller: txtHeight,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                      hintText:
+                          validate ? 'Value Can\'t Be Empty' : heightMessage),
+                  //   errorText: validate ? 'Value Can\'t Be Empty' : null
+                ),
                 TextField(
                     controller: txtWeight,
                     keyboardType: TextInputType.number,
@@ -100,7 +105,12 @@ class _BmiScreenState extends State<BmiScreen> {
     }
 
     setState(() {
-      result = 'Your BMI is ${bmi.toStringAsFixed(2)}';
+      if (txtWeight.text.isEmpty || txtHeight.text.isEmpty) {
+        validate == false;
+      } else {
+        validate == true;
+        result = 'Your BMI is ${bmi.toStringAsFixed(2)}';
+      }
     });
   }
 }
