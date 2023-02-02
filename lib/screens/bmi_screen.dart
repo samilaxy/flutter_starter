@@ -49,7 +49,8 @@ class _BmiScreenState extends State<BmiScreen> {
               children: [
                 ToggleButtons(children: [
                   Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                       child:
                           Text('Metric', style: TextStyle(fontSize: fontSize))),
                   Padding(
@@ -57,22 +58,29 @@ class _BmiScreenState extends State<BmiScreen> {
                       child: Text('Imperial',
                           style: TextStyle(fontSize: fontSize)))
                 ], isSelected: isSelected, onPressed: toggleMeasure),
-                TextField(
-                  controller: txtHeight,
-                  keyboardType: TextInputType.number,
-                  decoration: InputDecoration(
-                      hintText:
-                          validate ? 'Value Can\'t Be Empty' : heightMessage),
-                  //   errorText: validate ? 'Value Can\'t Be Empty' : null
-                ),
-                TextField(
-                    controller: txtWeight,
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  child: TextField(
+                    controller: txtHeight,
                     keyboardType: TextInputType.number,
-                    decoration: InputDecoration(hintText: weightMessage)),
-                ElevatedButton(
-                    onPressed: findBMI,
-                    child: Text('Calculate BMI',
-                        style: TextStyle(fontSize: fontSize))),
+                    decoration: InputDecoration(hintText: heightMessage),
+                    // errorText: validate ? 'Value Can\'t Be Empty' : null
+                  ),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 10),
+                  child: TextField(
+                      controller: txtWeight,
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(hintText: weightMessage)),
+                ),
+                Padding(
+                  padding: EdgeInsets.symmetric(vertical: 20),
+                  child: ElevatedButton(
+                      onPressed: findBMI,
+                      child: Text('Calculate BMI',
+                          style: TextStyle(fontSize: fontSize))),
+                ),
                 Text(result, style: TextStyle(fontSize: fontSize))
               ],
             ),
