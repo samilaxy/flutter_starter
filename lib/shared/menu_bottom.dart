@@ -19,8 +19,9 @@ class MenuBottom extends StatelessWidget {
           }
         },
         items: [
+          // ignore: prefer_const_constructors
           BottomNavigationBarItem(
-              icon: Icon(Icons.home_rounded), label: 'Home'),
+              icon: const Icon(Icons.home_rounded), label: 'Home'),
           BottomNavigationBarItem(
               icon: Icon(Icons.monitor_weight), label: 'BMI')
         ]);
