@@ -10,6 +10,8 @@ class HttpHelper {
 
   Future<String> getWeather(String location) async {
     Map<String, dynamic> parameters = {'q': location, 'appid': apiKey};
-    Uri uri = Uri.http(authority, path, parameters);
+    Uri uri = Uri.https(authority, path, parameters);
+    http.Response result = await http.get(uri);
+    return result.body;
   }
 }
