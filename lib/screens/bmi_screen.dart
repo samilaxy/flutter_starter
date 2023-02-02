@@ -56,20 +56,14 @@ class _BmiScreenState extends State<BmiScreen> {
                       child: Text('Imperial',
                           style: TextStyle(fontSize: fontSize)))
                 ], isSelected: isSelected, onPressed: toggleMeasure),
-                Padding(
-                  padding: const EdgeInsets.all(24.0),
-                  child: TextField(
-                      controller: txtHeight,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(hintText: heightMessage)),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(32.0),
-                  child: TextField(
-                      controller: txtWeight,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(hintText: weightMessage)),
-                ),
+                TextField(
+                    controller: txtHeight,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(hintText: heightMessage)),
+                TextField(
+                    controller: txtWeight,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(hintText: weightMessage)),
                 ElevatedButton(
                     onPressed: findBMI,
                     child: Text('Calculate BMI',
@@ -90,7 +84,7 @@ class _BmiScreenState extends State<BmiScreen> {
       isImperial = true;
     }
     setState(() {
-      isSelected = [isImperial, isImperial];
+      isSelected = [isMetric, isImperial];
     });
   }
 
