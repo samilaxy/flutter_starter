@@ -21,14 +21,26 @@ class _WeatherScreenState extends State<WeatherScreen> {
       ),
       drawer: const MenuDrawer(),
       bottomNavigationBar: const MenuBottom(),
-      body: Column(
-        children: [
-          ElevatedButton(
-              onPressed: () {},
-              child: const Text('Get Data', style: TextStyle(fontSize: 18))),
-          Text(result)
-        ],
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Column(
+          children: [
+            Center(
+              child: ElevatedButton(
+                  onPressed: getdata,
+                  child:
+                      const Text('Get Data', style: TextStyle(fontSize: 18))),
+            ),
+            Text(result)
+          ],
+        ),
       ),
     );
+  }
+
+  Future getdata() async {
+    HttpHelper helper = HttpHelper();
+    result = await helper.getWeather('Tema');
+    setState(() {});
   }
 }
