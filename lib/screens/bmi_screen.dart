@@ -80,4 +80,16 @@ class _BmiScreenState extends State<BmiScreen> {
       isSelected = [isImperial, isImperial];
     });
   }
+
+  void findBMI() {
+    double bmi = 0;
+    double height = double.tryParse(txtHeight.text) ?? 0;
+    double weight = double.tryParse(txtWeight.text) ?? 0;
+
+    if (isMetric) {
+      bmi = weight / (height * height);
+    } else {
+      bmi = weight * 703 / (height * height);
+    }
+  }
 }
