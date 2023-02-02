@@ -93,7 +93,7 @@ class _BmiScreenState extends State<BmiScreen> {
     }
 
     setState(() {
-      result = 'Your BMI is' + bmi.toStringAsFixed(2);
+      result = 'Your BMI is ' + bmi.toStringAsFixed(2);
     });
   }
 }
