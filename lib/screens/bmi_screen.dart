@@ -14,6 +14,7 @@ class _BmiScreenState extends State<BmiScreen> {
   final TextEditingController txtWeight = TextEditingController();
   final double fontSize = 18;
   String result = '';
+  bool validate = false;
   bool isMetric = true;
   bool isImperial = false;
   double? heighgt;
@@ -56,20 +57,18 @@ class _BmiScreenState extends State<BmiScreen> {
                       child: Text('Imperial',
                           style: TextStyle(fontSize: fontSize)))
                 ], isSelected: isSelected, onPressed: toggleMeasure),
-                Padding(
-                  padding: const EdgeInsets.all(24.0),
-                  child: TextField(
-                      controller: txtHeight,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(hintText: heightMessage)),
+                TextField(
+                  controller: txtHeight,
+                  keyboardType: TextInputType.number,
+                  decoration: InputDecoration(
+                      hintText:
+                          validate ? 'Value Can\'t Be Empty' : heightMessage),
+                  //   errorText: validate ? 'Value Can\'t Be Empty' : null
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(32.0),
-                  child: TextField(
-                      controller: txtWeight,
-                      keyboardType: TextInputType.number,
-                      decoration: InputDecoration(hintText: weightMessage)),
-                ),
+                TextField(
+                    controller: txtWeight,
+                    keyboardType: TextInputType.number,
+                    decoration: InputDecoration(hintText: weightMessage)),
                 ElevatedButton(
                     onPressed: findBMI,
                     child: Text('Calculate BMI',
@@ -90,7 +89,7 @@ class _BmiScreenState extends State<BmiScreen> {
       isImperial = true;
     }
     setState(() {
-      isSelected = [isImperial, isImperial];
+      isSelected = [isMetric, isImperial];
     });
   }
 
@@ -106,7 +105,12 @@ class _BmiScreenState extends State<BmiScreen> {
     }
 
     setState(() {
-      result = 'Your BMI is ${bmi.toStringAsFixed(2)}';
+      if (txtWeight.text.isEmpty || txtHeight.text.isEmpty) {
+        validate == false;
+      } else {
+        validate == true;
+        result = 'Your BMI is ${bmi.toStringAsFixed(2)}';
+      }
     });
   }
 }
