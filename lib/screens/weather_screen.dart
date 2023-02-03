@@ -55,7 +55,14 @@ Widget weatherRow(String label, String value) {
       padding: EdgeInsets.symmetric(vertical: 16),
       child: Row(children: [
         Expanded(
-            child: Text(label,
-                style: const TextStyle(fontSize: 20, color: Colors.black12)))
+          child: Text(label,
+              style: const TextStyle(fontSize: 20, color: Colors.black12)),
+          flex: 3,
+        ),
+        Expanded(
+          child: Text(value,
+              style: const TextStyle(fontSize: 20, color: Colors.black12)),
+          flex: 4,
+        )
       ]));
 }
