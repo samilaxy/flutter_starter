@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/data/weather.dart';
 import '../shared/menu_drawer.dart';
 import '../shared/menu_bottom.dart';
 import '../data/http_helper.dart';
@@ -11,7 +12,7 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
-  String result = '';
+  Weather result = Weather('', '', 0, 0, 0, 0);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +34,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   child:
                       const Text('Get Data', style: TextStyle(fontSize: 18))),
             ),
-            Text(result)
+            Text(result.name)
           ],
         ),
       ),
