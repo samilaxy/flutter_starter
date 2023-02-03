@@ -29,14 +29,19 @@ class _WeatherScreenState extends State<WeatherScreen> {
         child: ListView(
           children: [
             Padding(
-              padding: const EdgeInsets.all(16),
-              child: TextField(
-                  controller: txtPlace,
-                  decoration: InputDecoration(
-                      hintText: 'Enter city..',
-                      suffixIcon: IconButton(
-                          onPressed: getData, icon: const Icon(Icons.search)))),
-            )
+                padding: const EdgeInsets.all(16),
+                child: TextField(
+                    controller: txtPlace,
+                    decoration: InputDecoration(
+                        hintText: 'Enter city..',
+                        suffixIcon: IconButton(
+                            onPressed: getData,
+                            icon: const Icon(Icons.search))))),
+            weatherRow('Place: ', result.name),
+            weatherRow('Description: ', result.description),
+            weatherRow('Temperature: ', result.temperature.toStringAsFixed(2)),
+            weatherRow('Percieved: ', result.percieved.toStringAsFixed(2)),
+            weatherRow('Pressure: ', result.pressure.toString())
           ],
         ),
       ),
@@ -65,4 +70,6 @@ Widget weatherRow(String label, String value) {
           flex: 4,
         )
       ]));
+
+  return row;
 }
