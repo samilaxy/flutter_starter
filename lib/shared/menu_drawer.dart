@@ -26,7 +26,7 @@ class MenuDrawer extends StatelessWidget {
             style: TextStyle(color: Colors.black, fontSize: 20))));
     muenuTitles.forEach((element) {
       menuItems.add(ListTile(
-        title: Text(element, style: TextStyle(fontSize: 15)),
+        title: Text(element, style: const TextStyle(fontSize: 15)),
         onTap: () {},
       ));
     });
