@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:http/http.dart' as http;
 
 class HttpHelper {
@@ -12,6 +14,8 @@ class HttpHelper {
     Map<String, dynamic> parameters = {'q': location, 'appid': apiKey};
     Uri uri = Uri.https(authority, path, parameters);
     http.Response result = await http.get(uri);
+
+    Map<String, dynamic> data = jsonDecode(result.body);
     return result.body;
   }
 }

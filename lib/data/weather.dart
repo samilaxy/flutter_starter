@@ -7,4 +7,7 @@ class Weather {
   double percieved = 0;
   int pressure = 0;
   int humidity = 0;
+
+  Weather(this.name, this.description, this.temperature, this.percieved,
+      this.pressure, this.humidity);
 }
