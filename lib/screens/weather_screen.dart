@@ -27,6 +27,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
           children: [
             Center(
               child: ElevatedButton(
+                  style:
+                      ElevatedButton.styleFrom(backgroundColor: Colors.black12),
                   onPressed: getdata,
                   child:
                       const Text('Get Data', style: TextStyle(fontSize: 18))),
