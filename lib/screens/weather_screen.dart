@@ -41,7 +41,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
             weatherRow('Description: ', result.description),
             weatherRow('Temperature: ', result.temperature.toStringAsFixed(2)),
             weatherRow('Percieved: ', result.percieved.toStringAsFixed(2)),
-            weatherRow('Pressure: ', result.pressure.toString())
+            weatherRow('Pressure: ', result.pressure.toString()),
+            weatherRow('Humidity: ', result.humidity.toString())
           ],
         ),
       ),
@@ -61,12 +62,12 @@ Widget weatherRow(String label, String value) {
       child: Row(children: [
         Expanded(
           child: Text(label,
-              style: const TextStyle(fontSize: 20, color: Colors.black12)),
+              style: const TextStyle(fontSize: 20, color: Colors.grey)),
           flex: 3,
         ),
         Expanded(
           child: Text(value,
-              style: const TextStyle(fontSize: 20, color: Colors.black12)),
+              style: const TextStyle(fontSize: 20, color: Colors.grey)),
           flex: 4,
         )
       ]));
