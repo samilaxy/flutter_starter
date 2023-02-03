@@ -63,8 +63,9 @@ class _BmiScreenState extends State<BmiScreen> {
                   child: TextField(
                     controller: txtHeight,
                     keyboardType: TextInputType.number,
-                    decoration: InputDecoration(hintText: heightMessage),
-                    // errorText: validate ? 'Value Can\'t Be Empty' : null
+                    decoration: InputDecoration(
+                        hintText: heightMessage,
+                        errorText: validate ? 'Field Can\'t Be Empty' : null),
                   ),
                 ),
                 Padding(

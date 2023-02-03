@@ -12,7 +12,9 @@ class WeatherScreen extends StatefulWidget {
 }
 
 class _WeatherScreenState extends State<WeatherScreen> {
+  final TextEditingController txtPlace = TextEditingController();
   Weather result = Weather('', '', 0, 0, 0, 0);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,27 +25,37 @@ class _WeatherScreenState extends State<WeatherScreen> {
       drawer: const MenuDrawer(),
       bottomNavigationBar: const MenuBottom(),
       body: Padding(
-        padding: const EdgeInsets.all(20.0),
-        child: Column(
+        padding: const EdgeInsets.all(16),
+        child: ListView(
           children: [
-            Center(
-              child: ElevatedButton(
-                  style:
-                      ElevatedButton.styleFrom(backgroundColor: Colors.black12),
-                  onPressed: getdata,
-                  child:
-                      const Text('Get Data', style: TextStyle(fontSize: 18))),
-            ),
-            Text(result.name)
+            Padding(
+              padding: const EdgeInsets.all(16),
+              child: TextField(
+                  controller: txtPlace,
+                  decoration: InputDecoration(
+                      hintText: 'Enter city..',
+                      suffixIcon: IconButton(
+                          onPressed: getData, icon: const Icon(Icons.search)))),
+            )
           ],
         ),
       ),
     );
   }
 
-  Future getdata() async {
+  Future getData() async {
     HttpHelper helper = HttpHelper();
-    result = await helper.getWeather('Tema');
+    result = await helper.getWeather(txtPlace.text);
     setState(() {});
   }
+}
+
+Widget weatherRow(String label, String value) {
+  Widget row = Padding(
+      padding: EdgeInsets.symmetric(vertical: 16),
+      child: Row(children: [
+        Expanded(
+            child: Text(label,
+                style: const TextStyle(fontSize: 20, color: Colors.black12)))
+      ]));
 }
