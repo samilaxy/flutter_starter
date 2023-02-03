@@ -8,8 +8,7 @@ class IntroScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title:
-              const Text('MyManchodf', style: TextStyle(color: Colors.black)),
+          title: const Text('MyMancho', style: TextStyle(color: Colors.black)),
           backgroundColor: Colors.white30,
         ),
         drawer: const MenuDrawer(),
