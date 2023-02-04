@@ -48,17 +48,22 @@ class _BmiScreenState extends State<BmiScreen> {
             padding: const EdgeInsets.all(40.0),
             child: Column(
               children: [
-                ToggleButtons(children: [
-                  Padding(
-                      padding:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                      child:
-                          Text('Metric', style: TextStyle(fontSize: fontSize))),
-                  Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
-                      child: Text('Imperial',
-                          style: TextStyle(fontSize: fontSize)))
-                ], isSelected: isSelected, onPressed: toggleMeasure),
+                ToggleButtons(
+                    children: [
+                      Padding(
+                          padding: EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 10),
+                          child: Text('Metric',
+                              style: TextStyle(fontSize: fontSize))),
+                      Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 16),
+                          child: Text('Imperial',
+                              style: TextStyle(fontSize: fontSize)))
+                    ],
+                    focusColor: Colors.black,
+                    selectedColor: Colors.black,
+                    isSelected: isSelected,
+                    onPressed: toggleMeasure),
                 Padding(
                   padding: EdgeInsets.only(top: 40),
                   child: TextField(
@@ -66,6 +71,7 @@ class _BmiScreenState extends State<BmiScreen> {
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                         hintText: heightMessage,
+                        fillColor: Colors.black,
                         errorText: validate ? 'Field Can\'t Be Empty' : null),
                   ),
                 ),
@@ -77,7 +83,7 @@ class _BmiScreenState extends State<BmiScreen> {
                       decoration: InputDecoration(hintText: weightMessage)),
                 ),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                  padding: const EdgeInsets.all(8.0),
                   child: PlatformElevatedButton(
                       onPressed: findBMI,
                       color: Colors.black,
