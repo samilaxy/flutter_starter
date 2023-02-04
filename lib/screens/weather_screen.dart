@@ -40,29 +40,36 @@ class _WeatherScreenState extends State<WeatherScreen> {
             Container(
                 color: Colors.white24,
                 height: 200,
-                width: 300,
                 child: Padding(
-                  padding: const EdgeInsets.all(30.0),
+                  padding: const EdgeInsets.only(
+                    top: 20,
+                  ),
                   child: Column(children: [
-                    Icon(Icons.cloud,
-                        color: const Color(0xFF000000), size: 100.0),
+                    Icon(Icons.cloud, color: Colors.indigoAccent, size: 100.0),
                     Text(result.description,
                         style:
                             const TextStyle(fontSize: 20, color: Colors.grey))
                   ]),
                 )),
             Container(
-                color: Colors.black12,
-                // height: 400,
+                decoration: const BoxDecoration(
+                  borderRadius: BorderRadius.all(Radius.circular(10)),
+                  color: Colors.black12,
+                ),
+                //color: Colors.black12,
+                // height: 350,
                 // width: 300,
-                child: Column(children: [
-                  weatherRow(
-                      'Temperature: ', result.temperature.toStringAsFixed(2)),
-                  weatherRow(
-                      'Percieved: ', result.percieved.toStringAsFixed(2)),
-                  weatherRow('Pressure: ', result.pressure.toString()),
-                  weatherRow('Humidity: ', result.humidity.toString())
-                ]))
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 30),
+                  child: Column(children: [
+                    weatherRow(
+                        'Temperature ', result.temperature.toStringAsFixed(2)),
+                    weatherRow(
+                        'Percieved ', result.percieved.toStringAsFixed(2)),
+                    weatherRow('Pressure ', result.pressure.toString()),
+                    weatherRow('Humidity ', result.humidity.toString())
+                  ]),
+                ))
           ],
         ),
       ),
@@ -82,13 +89,15 @@ Widget weatherRow(String label, String value) {
       padding: EdgeInsets.all(16),
       child: Row(children: [
         Expanded(
-          child: Icon(Icons.cloud, color: Colors.black, size: 30.0),
+          child: Icon(Icons.cloud, color: Colors.indigoAccent, size: 40.0),
           flex: 2,
         ),
         Expanded(
-          child: Text(label,
-              style: const TextStyle(fontSize: 20, color: Colors.black)),
-          flex: 3,
+          child: Center(
+            child: Text(label,
+                style: const TextStyle(fontSize: 20, color: Colors.black)),
+          ),
+          flex: 4,
         ),
         Expanded(
           child: Text(value,
