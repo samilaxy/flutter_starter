@@ -77,6 +77,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
 }
 
 Widget weatherRow(String label, String value) {
+  //IconData iconTep =  'Icons.${iconTep}'+ iconTep;
   Widget row = Padding(
       padding: EdgeInsets.all(16),
       child: Row(children: [
