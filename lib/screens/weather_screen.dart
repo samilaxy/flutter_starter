@@ -37,12 +37,32 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         suffixIcon: IconButton(
                             onPressed: getData,
                             icon: const Icon(Icons.search))))),
-            weatherRow('Place: ', result.name),
-            weatherRow('Description: ', result.description),
-            weatherRow('Temperature: ', result.temperature.toStringAsFixed(2)),
-            weatherRow('Percieved: ', result.percieved.toStringAsFixed(2)),
-            weatherRow('Pressure: ', result.pressure.toString()),
-            weatherRow('Humidity: ', result.humidity.toString())
+            Container(
+                color: Colors.white24,
+                height: 200,
+                width: 300,
+                child: Padding(
+                  padding: const EdgeInsets.all(30.0),
+                  child: Column(children: [
+                    Icon(Icons.cloud,
+                        color: const Color(0xFF000000), size: 100.0),
+                    Text(result.description,
+                        style:
+                            const TextStyle(fontSize: 20, color: Colors.grey))
+                  ]),
+                )),
+            Container(
+                color: Colors.black12,
+                // height: 400,
+                // width: 300,
+                child: Column(children: [
+                  weatherRow(
+                      'Temperature: ', result.temperature.toStringAsFixed(2)),
+                  weatherRow(
+                      'Percieved: ', result.percieved.toStringAsFixed(2)),
+                  weatherRow('Pressure: ', result.pressure.toString()),
+                  weatherRow('Humidity: ', result.humidity.toString())
+                ]))
           ],
         ),
       ),
@@ -58,17 +78,21 @@ class _WeatherScreenState extends State<WeatherScreen> {
 
 Widget weatherRow(String label, String value) {
   Widget row = Padding(
-      padding: EdgeInsets.symmetric(vertical: 16),
+      padding: EdgeInsets.all(16),
       child: Row(children: [
         Expanded(
+          child: Icon(Icons.cloud, color: Colors.black, size: 30.0),
+          flex: 2,
+        ),
+        Expanded(
           child: Text(label,
-              style: const TextStyle(fontSize: 20, color: Colors.grey)),
+              style: const TextStyle(fontSize: 20, color: Colors.black)),
           flex: 3,
         ),
         Expanded(
           child: Text(value,
-              style: const TextStyle(fontSize: 20, color: Colors.grey)),
-          flex: 4,
+              style: const TextStyle(fontSize: 20, color: Colors.black)),
+          flex: 2,
         )
       ]));
 

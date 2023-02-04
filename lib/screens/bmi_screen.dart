@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/shared/menu_bottom.dart';
 import 'package:flutter_starter/shared/menu_drawer.dart';
+import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 
 class BmiScreen extends StatefulWidget {
   const BmiScreen({super.key});
@@ -69,15 +70,16 @@ class _BmiScreenState extends State<BmiScreen> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10),
+                  padding: EdgeInsets.symmetric(vertical: 20),
                   child: TextField(
                       controller: txtWeight,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(hintText: weightMessage)),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20),
-                  child: ElevatedButton(
+                  padding:
+                      const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                  child: PlatformElevatedButton(
                       onPressed: findBMI,
                       child: Text('Calculate BMI',
                           style: TextStyle(fontSize: fontSize))),
@@ -123,3 +125,13 @@ class _BmiScreenState extends State<BmiScreen> {
     });
   }
 }
+
+
+/*
+if (Platform.isAndroid) {
+  return ElevatedButton(onPressed: onPressed, child: child);
+} else if (Platform.isIOS) {
+  return CupertinoButton.filled(onPressed: onPressed, child: child);
+}
+
+*/
