@@ -60,7 +60,7 @@ class _BmiScreenState extends State<BmiScreen> {
                           style: TextStyle(fontSize: fontSize)))
                 ], isSelected: isSelected, onPressed: toggleMeasure),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 10),
+                  padding: EdgeInsets.only(top: 40),
                   child: TextField(
                     controller: txtHeight,
                     keyboardType: TextInputType.number,
@@ -77,10 +77,10 @@ class _BmiScreenState extends State<BmiScreen> {
                       decoration: InputDecoration(hintText: weightMessage)),
                 ),
                 Padding(
-                  padding:
-                      const EdgeInsets.symmetric(vertical: 20, horizontal: 10),
+                  padding: const EdgeInsets.symmetric(horizontal: 16),
                   child: PlatformElevatedButton(
                       onPressed: findBMI,
+                      color: Colors.black,
                       child: Text('Calculate BMI',
                           style: TextStyle(fontSize: fontSize))),
                 ),
