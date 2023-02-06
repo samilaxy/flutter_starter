@@ -37,11 +37,56 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         suffixIcon: IconButton(
                             onPressed: getData,
                             icon: const Icon(Icons.search))))),
-            weatherRow('Place: ', result.name),
-            weatherRow('Description: ', result.description),
-            weatherRow('Temperature: ', result.temperature.toStringAsFixed(2)),
-            weatherRow('Percieved: ', result.percieved.toStringAsFixed(2)),
-            weatherRow('Pressure: ', result.pressure.toString())
+            Container(
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.white24,
+                    image: DecorationImage(
+                      image: AssetImage('assets/cloud.jpeg'),
+                      fit: BoxFit.cover,
+                    )),
+                height: 150,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 10),
+                  child: Column(children: [
+                    Icon(Icons.cloud, color: Colors.blueGrey, size: 100.0),
+                    Text(result.description,
+                        style: const TextStyle(
+                            fontSize: 25,
+                            color: Colors.black,
+                            shadows: [
+                              Shadow(
+                                  offset: Offset(1.0, 1.0),
+                                  blurRadius: 2.0,
+                                  color: Colors.white)
+                            ]))
+                  ]),
+                )),
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Container(
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      color: Colors.black12,
+                      image: DecorationImage(
+                        image: AssetImage('assets/weather.avif'),
+                        fit: BoxFit.cover,
+                      )),
+                  //color: Colors.black12,
+                  // height: 350,
+                  // width: 300,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 30),
+                    child: Column(children: [
+                      weatherRow('Temperature ',
+                          result.temperature.toStringAsFixed(2)),
+                      weatherRow(
+                          'Percieved ', result.percieved.toStringAsFixed(2)),
+                      weatherRow('Pressure ', result.pressure.toString()),
+                      weatherRow('Humidity ', result.humidity.toString())
+                    ]),
+                  )),
+            )
           ],
         ),
       ),
@@ -49,25 +94,51 @@ class _WeatherScreenState extends State<WeatherScreen> {
   }
 
   Future getData() async {
-    HttpHelper helper = HttpHelper();
-    result = await helper.getWeather(txtPlace.text);
+    String location = txtPlace.text;
+    if (location.isNotEmpty) {
+      HttpHelper helper = HttpHelper();
+      result = await helper.getWeather(txtPlace.text);
+    }
     setState(() {});
   }
 }
 
 Widget weatherRow(String label, String value) {
+  //IconData iconTep =  'Icons.${iconTep}'+ iconTep;
   Widget row = Padding(
-      padding: EdgeInsets.symmetric(vertical: 16),
+      padding: EdgeInsets.all(16),
       child: Row(children: [
         Expanded(
-          child: Text(label,
-              style: const TextStyle(fontSize: 20, color: Colors.black12)),
-          flex: 3,
+          child: Icon(Icons.cloud, color: Colors.indigoAccent, size: 40.0),
+          flex: 2,
+        ),
+        Expanded(
+          child: Center(
+            child: Text(label,
+                style: const TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    shadows: [
+                      Shadow(
+                          offset: Offset(1.0, 1.0),
+                          blurRadius: 2.0,
+                          color: Colors.white)
+                    ])),
+          ),
+          flex: 4,
         ),
         Expanded(
           child: Text(value,
-              style: const TextStyle(fontSize: 20, color: Colors.black12)),
-          flex: 4,
+              style: const TextStyle(
+                  fontSize: 18,
+                  color: Colors.black,
+                  shadows: [
+                    Shadow(
+                        offset: Offset(1.0, 1.0),
+                        blurRadius: 2.0,
+                        color: Colors.white)
+                  ])),
+          flex: 2,
         )
       ]));
 
