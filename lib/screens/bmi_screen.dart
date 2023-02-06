@@ -80,7 +80,7 @@ class _BmiScreenState extends State<BmiScreen> {
                               validate ? null : 'Fields Can\'t Be Empty')),
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.only(top: 40, bottom: 20),
                   child: PlatformElevatedButton(
                       onPressed: findBMI,
                       color: Colors.black,
