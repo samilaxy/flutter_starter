@@ -38,38 +38,55 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             onPressed: getData,
                             icon: const Icon(Icons.search))))),
             Container(
-                color: Colors.white24,
-                height: 200,
+                decoration: const BoxDecoration(
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                    color: Colors.white24,
+                    image: DecorationImage(
+                      image: AssetImage('assets/cloud.jpeg'),
+                      fit: BoxFit.cover,
+                    )),
+                height: 150,
                 child: Padding(
-                  padding: const EdgeInsets.only(
-                    top: 20,
-                  ),
+                  padding: const EdgeInsets.only(top: 10),
                   child: Column(children: [
-                    Icon(Icons.cloud, color: Colors.indigoAccent, size: 100.0),
+                    Icon(Icons.cloud, color: Colors.blueGrey, size: 100.0),
                     Text(result.description,
-                        style:
-                            const TextStyle(fontSize: 20, color: Colors.grey))
+                        style: const TextStyle(
+                            fontSize: 25,
+                            color: Colors.black,
+                            shadows: [
+                              Shadow(
+                                  offset: Offset(1.0, 1.0),
+                                  blurRadius: 2.0,
+                                  color: Colors.white)
+                            ]))
                   ]),
                 )),
-            Container(
-                decoration: const BoxDecoration(
-                  borderRadius: BorderRadius.all(Radius.circular(10)),
-                  color: Colors.black12,
-                ),
-                //color: Colors.black12,
-                // height: 350,
-                // width: 300,
-                child: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 30),
-                  child: Column(children: [
-                    weatherRow(
-                        'Temperature ', result.temperature.toStringAsFixed(2)),
-                    weatherRow(
-                        'Percieved ', result.percieved.toStringAsFixed(2)),
-                    weatherRow('Pressure ', result.pressure.toString()),
-                    weatherRow('Humidity ', result.humidity.toString())
-                  ]),
-                ))
+            Padding(
+              padding: const EdgeInsets.only(top: 20),
+              child: Container(
+                  decoration: const BoxDecoration(
+                      borderRadius: BorderRadius.all(Radius.circular(10)),
+                      color: Colors.black12,
+                      image: DecorationImage(
+                        image: AssetImage('assets/weather.avif'),
+                        fit: BoxFit.cover,
+                      )),
+                  //color: Colors.black12,
+                  // height: 350,
+                  // width: 300,
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 30),
+                    child: Column(children: [
+                      weatherRow('Temperature ',
+                          result.temperature.toStringAsFixed(2)),
+                      weatherRow(
+                          'Percieved ', result.percieved.toStringAsFixed(2)),
+                      weatherRow('Pressure ', result.pressure.toString()),
+                      weatherRow('Humidity ', result.humidity.toString())
+                    ]),
+                  )),
+            )
           ],
         ),
       ),
@@ -77,8 +94,11 @@ class _WeatherScreenState extends State<WeatherScreen> {
   }
 
   Future getData() async {
-    HttpHelper helper = HttpHelper();
-    result = await helper.getWeather(txtPlace.text);
+    String location = txtPlace.text;
+    if (location.isNotEmpty) {
+      HttpHelper helper = HttpHelper();
+      result = await helper.getWeather(txtPlace.text);
+    }
     setState(() {});
   }
 }
@@ -95,13 +115,29 @@ Widget weatherRow(String label, String value) {
         Expanded(
           child: Center(
             child: Text(label,
-                style: const TextStyle(fontSize: 20, color: Colors.black)),
+                style: const TextStyle(
+                    fontSize: 18,
+                    color: Colors.black,
+                    shadows: [
+                      Shadow(
+                          offset: Offset(1.0, 1.0),
+                          blurRadius: 2.0,
+                          color: Colors.white)
+                    ])),
           ),
           flex: 4,
         ),
         Expanded(
           child: Text(value,
-              style: const TextStyle(fontSize: 20, color: Colors.black)),
+              style: const TextStyle(
+                  fontSize: 18,
+                  color: Colors.black,
+                  shadows: [
+                    Shadow(
+                        offset: Offset(1.0, 1.0),
+                        blurRadius: 2.0,
+                        color: Colors.white)
+                  ])),
           flex: 2,
         )
       ]));

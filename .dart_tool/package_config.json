@@ -56,6 +56,12 @@
       "languageVersion": "2.17"
     },
     {
+      "name": "flutter_platform_alert",
+      "rootUri": "file:///Users/noyesamuel/.pub-cache/hosted/pub.dev/flutter_platform_alert-0.3.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "flutter_platform_widgets",
       "rootUri": "file:///Users/noyesamuel/.pub-cache/hosted/pub.dev/flutter_platform_widgets-3.0.0",
       "packageUri": "lib/",
@@ -176,7 +182,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-02-04T00:53:37.118366Z",
+  "generated": "2023-02-06T08:53:08.383390Z",
   "generator": "pub",
   "generatorVersion": "2.19.0"
 }
