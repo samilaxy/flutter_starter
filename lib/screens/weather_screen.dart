@@ -78,12 +78,18 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   child: Padding(
                     padding: const EdgeInsets.symmetric(vertical: 30),
                     child: Column(children: [
-                      weatherRow('Temperature ',
-                          result.temperature.toStringAsFixed(0) + '°C'),
                       weatherRow(
-                          'Percieved ', result.percieved.toStringAsFixed(2)),
-                      weatherRow('Pressure ', result.pressure.toString()),
-                      weatherRow('Humidity ', result.humidity.toString())
+                          'Temperature ',
+                          result.temperature.toStringAsFixed(0) + '°C',
+                          Icons.cloud),
+                      weatherRow(
+                          'Percieved ',
+                          result.percieved.toStringAsFixed(2),
+                          Icons.waterfall_chart_sharp),
+                      weatherRow('Pressure ', result.pressure.toString(),
+                          Icons.access_alarm),
+                      weatherRow('Humidity ', result.humidity.toString(),
+                          Icons.access_alarm)
                     ]),
                   )),
             )
@@ -103,13 +109,13 @@ class _WeatherScreenState extends State<WeatherScreen> {
   }
 }
 
-Widget weatherRow(String label, String value) {
+Widget weatherRow(String label, String value, IconData icon) {
   //IconData iconTep =  'Icons.${iconTep}'+ iconTep;
   Widget row = Padding(
       padding: EdgeInsets.all(16),
       child: Row(children: [
         Expanded(
-          child: Icon(Icons.cloud, color: Colors.indigoAccent, size: 40.0),
+          child: Icon(icon, color: Colors.indigoAccent, size: 40.0),
           flex: 2,
         ),
         Expanded(
