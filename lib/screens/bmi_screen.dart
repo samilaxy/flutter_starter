@@ -16,16 +16,17 @@ class _BmiScreenState extends State<BmiScreen> {
   final TextEditingController txtWeight = TextEditingController();
   final double fontSize = 18;
   String result = '';
-  bool validate = true;
   bool isMetric = true;
   bool isImperial = false;
   double? heighgt;
   double? weight;
   late List<bool> isSelected;
+  late bool validate = false;
   String heightMessage = '';
   String weightMessage = '';
   @override
   void initState() {
+    // validate = true;
     isSelected = [isMetric, isImperial];
     super.initState();
   }
@@ -75,9 +76,9 @@ class _BmiScreenState extends State<BmiScreen> {
                       controller: txtWeight,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
-                          hintText: weightMessage,
-                          errorText:
-                              validate ? null : 'Fields Can\'t Be Empty')),
+                        hintText: weightMessage,
+                        // errorText: validate ? null : 'Fields Can\'t Be Empty'
+                      )),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(top: 40, bottom: 20),
@@ -131,6 +132,7 @@ class _BmiScreenState extends State<BmiScreen> {
       }
       const DialogExample();
     });
+    print('validate state: ${validate}');
   }
 }
 

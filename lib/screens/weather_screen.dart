@@ -25,75 +25,88 @@ class _WeatherScreenState extends State<WeatherScreen> {
       drawer: const MenuDrawer(),
       bottomNavigationBar: const MenuBottom(),
       body: Padding(
-        padding: const EdgeInsets.all(16),
-        child: ListView(
-          children: [
-            Padding(
-                padding: const EdgeInsets.all(16),
-                child: TextField(
-                    controller: txtPlace,
-                    decoration: InputDecoration(
-                        hintText: 'Enter city..',
-                        suffixIcon: IconButton(
-                            onPressed: getData,
-                            icon: const Icon(Icons.search))))),
-            Container(
-                decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(Radius.circular(10)),
-                    color: Colors.white24,
-                    image: DecorationImage(
-                      image: AssetImage('assets/cloud.jpeg'),
-                      fit: BoxFit.cover,
-                    )),
-                height: 150,
-                child: Padding(
-                  padding: const EdgeInsets.only(top: 10),
-                  child: Column(children: [
-                    Icon(Icons.cloud, color: Colors.blueGrey, size: 100.0),
-                    Text(result.description,
-                        style: const TextStyle(
-                            fontSize: 25,
-                            color: Colors.black,
-                            shadows: [
-                              Shadow(
-                                  offset: Offset(1.0, 1.0),
-                                  blurRadius: 2.0,
-                                  color: Colors.white)
-                            ]))
-                  ]),
-                )),
-            Padding(
-              padding: const EdgeInsets.only(top: 20),
-              child: Container(
-                  decoration: const BoxDecoration(
+        padding: const EdgeInsets.all(0),
+        child: Container(
+          decoration: const BoxDecoration(
+              color: Colors.white24,
+              image: DecorationImage(
+                image: AssetImage('assets/cloud.jpeg'),
+                fit: BoxFit.cover,
+              )),
+          child: ListView(
+            children: [
+              Padding(
+                  padding:
+                      const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                  child: TextField(
+                      controller: txtPlace,
+                      decoration: InputDecoration(
+                          hintText: 'Enter city..',
+                          suffixIcon: IconButton(
+                              onPressed: getData,
+                              icon: const Icon(Icons.search))))),
+              Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Container(
+                    decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                       color: Colors.black12,
-                      image: DecorationImage(
-                        image: AssetImage('assets/weather.avif'),
-                        fit: BoxFit.cover,
+                      // image: DecorationImage(
+                      //   image: AssetImage('assets/cloud.jpeg'),
+                      //   fit: BoxFit.cover,
+                      // )
+                    ),
+                    height: 150,
+                    child: Padding(
+                      padding: const EdgeInsets.only(top: 10),
+                      child: Column(children: [
+                        Icon(Icons.cloud, color: Colors.blueGrey, size: 100.0),
+                        Text(result.description,
+                            style: const TextStyle(
+                                fontSize: 25,
+                                color: Colors.black,
+                                shadows: [
+                                  Shadow(
+                                      offset: Offset(1.0, 1.0),
+                                      blurRadius: 2.0,
+                                      color: Colors.white)
+                                ]))
+                      ]),
+                    )),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 0),
+                child: Padding(
+                  padding: const EdgeInsets.all(16.0),
+                  child: Container(
+                      decoration: const BoxDecoration(
+                        borderRadius: BorderRadius.all(Radius.circular(10)),
+                        color: Colors.black12,
+                      ),
+                      //color: Colors.black12,
+                      // height: 350,
+                      // width: 300,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 30),
+                        child: Column(children: [
+                          weatherRow(
+                              'Temperature ',
+                              result.temperature.toStringAsFixed(0) + '°C',
+                              Icons.cloud),
+                          weatherRow(
+                              'Percieved ',
+                              result.percieved.toStringAsFixed(2),
+                              Icons.waterfall_chart_sharp),
+                          weatherRow('Pressure ', result.pressure.toString(),
+                              Icons.access_alarm),
+                          weatherRow('Humidity ', result.humidity.toString(),
+                              Icons.access_alarm)
+                        ]),
                       )),
-                  //color: Colors.black12,
-                  // height: 350,
-                  // width: 300,
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 30),
-                    child: Column(children: [
-                      weatherRow(
-                          'Temperature ',
-                          result.temperature.toStringAsFixed(0) + '°C',
-                          Icons.cloud),
-                      weatherRow(
-                          'Percieved ',
-                          result.percieved.toStringAsFixed(2),
-                          Icons.waterfall_chart_sharp),
-                      weatherRow('Pressure ', result.pressure.toString(),
-                          Icons.access_alarm),
-                      weatherRow('Humidity ', result.humidity.toString(),
-                          Icons.access_alarm)
-                    ]),
-                  )),
-            )
-          ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
