@@ -3,6 +3,8 @@ import 'package:flutter_starter/data/weather.dart';
 import '../shared/menu_drawer.dart';
 import '../shared/menu_bottom.dart';
 import '../data/http_helper.dart';
+import 'package:location/location.dart';
+//import 'GetLocation.dart';
 
 class WeatherScreen extends StatefulWidget {
   const WeatherScreen({super.key});
@@ -13,8 +15,9 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
   final TextEditingController txtPlace = TextEditingController();
-  Weather result = Weather('', '', 0, 0, 0, 0);
-
+  Weather result = Weather('', '', 0, 0, 0, '');
+  String icon_url = 'http://openweathermap.org/img/w/';
+//'', '', 0, 0, 0, 0,''
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,16 +54,19 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
                       color: Colors.black12,
-                      // image: DecorationImage(
-                      //   image: AssetImage('assets/cloud.jpeg'),
-                      //   fit: BoxFit.cover,
-                      // )
                     ),
                     height: 150,
                     child: Padding(
                       padding: const EdgeInsets.only(top: 10),
                       child: Column(children: [
-                        Icon(Icons.cloud, color: Colors.blueGrey, size: 100.0),
+                        Image.network(
+                          '${icon_url}${result.icon}.png',
+                          height: 80,
+                          width: 100,
+                          scale: 1,
+                        ),
+
+                        //  Icon(result.icon, color: Colors.blueGrey, size: 100.0),
                         Text(result.description,
                             style: const TextStyle(
                                 fontSize: 25,
@@ -92,7 +98,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           weatherRow(
                               'Temperature ',
                               result.temperature.toStringAsFixed(0) + '°C',
-                              Icons.cloud),
+                              Icons.wb_sunny),
                           weatherRow(
                               'Percieved ',
                               result.percieved.toStringAsFixed(2),
@@ -117,6 +123,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
     if (location.isNotEmpty) {
       HttpHelper helper = HttpHelper();
       result = await helper.getWeather(txtPlace.text);
+      print('qwer: ${result.icon}.png');
     }
     setState(() {});
   }
@@ -163,3 +170,15 @@ Widget weatherRow(String label, String value, IconData icon) {
 
   return row;
 }
+
+//getLocation
+// void getLocation() async {
+//   Getlocation getlocation = getLocation();
+//   await getlocation.getCurrentLocation();
+
+//   print(getlocation.latitude);
+//   print(getlocation.longitude);
+//   print(getlocation.city);
+//   city = getlocation.city;
+//   getTemp(getlocation.latitude, getlocation.longitude);
+// }
