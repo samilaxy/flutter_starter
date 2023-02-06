@@ -79,7 +79,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     padding: const EdgeInsets.symmetric(vertical: 30),
                     child: Column(children: [
                       weatherRow('Temperature ',
-                          result.temperature.toStringAsFixed(2)),
+                          result.temperature.toStringAsFixed(0) + '°'),
                       weatherRow(
                           'Percieved ', result.percieved.toStringAsFixed(2)),
                       weatherRow('Pressure ', result.pressure.toString()),
