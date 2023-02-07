@@ -81,7 +81,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                             '${icon_url}${result.icon}.png',
                             fit: BoxFit.fitHeight,
                             //  height: 70,
-                             width: 100,
+                            // width: 100,
                           ),
                         ),
                         Padding(
