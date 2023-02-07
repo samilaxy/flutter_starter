@@ -4,6 +4,7 @@ import '../shared/menu_drawer.dart';
 import '../shared/menu_bottom.dart';
 import '../data/http_helper.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:intl/intl.dart';
 //import 'package:weather_icons/weather_icons.dart';
 //import 'package:location/location.dart';
 //import 'GetLocation.dart';
@@ -20,6 +21,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
   Weather result = Weather('', '', 0, 0, 0, '');
   String icon_url = 'http://openweathermap.org/img/w/';
   var now = DateTime.now();
+  // DateFormat dateFormat = new DateFormat.Hm();
 //'', '', 0, 0, 0, 0,''
   @override
   Widget build(BuildContext context) {
@@ -36,7 +38,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
           decoration: const BoxDecoration(
               color: Colors.white24,
               image: DecorationImage(
-                image: AssetImage('assets/cloud.avif'),
+                image: AssetImage('assets/cloud.jpeg'),
                 fit: BoxFit.cover,
               )),
           child: ListView(
@@ -62,6 +64,16 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 10),
                       child: Column(children: [
+                        Text(now.toString(),
+                            style: const TextStyle(
+                                fontSize: 15,
+                                color: Colors.black,
+                                shadows: [
+                                  Shadow(
+                                      offset: Offset(1.0, 1.0),
+                                      blurRadius: 2.0,
+                                      color: Colors.white)
+                                ])),
                         Image.network(
                           '${icon_url}${result.icon}.png',
                           fit: BoxFit.fitHeight,
