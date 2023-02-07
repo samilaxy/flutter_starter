@@ -80,7 +80,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           child: Image.network(
                             '${icon_url}${result.icon}.png',
                             fit: BoxFit.fitHeight,
-                            height: 70,
+                            //  height: 70,
                             // width: 100,
                           ),
                         ),
