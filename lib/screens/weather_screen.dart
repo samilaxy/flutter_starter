@@ -25,8 +25,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Weather', style: TextStyle(color: Colors.black)),
-        backgroundColor: Colors.white30,
+        title: const Text('Weather', style: TextStyle(color: Colors.white)),
+        backgroundColor: Colors.black54,
       ),
       drawer: const MenuDrawer(),
       bottomNavigationBar: const MenuBottom(),
@@ -36,7 +36,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
           decoration: const BoxDecoration(
               color: Colors.white24,
               image: DecorationImage(
-                image: AssetImage('assets/cloud1.avif'),
+                image: AssetImage('assets/cloud.avif'),
                 fit: BoxFit.cover,
               )),
           child: ListView(
@@ -100,7 +100,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         child: Column(children: [
                           weatherRow(
                               'Temperature ',
-                              result.temperature.toStringAsFixed(0) + '°C',
+                              '${result.temperature.toStringAsFixed(0)}°C',
                               FontAwesomeIcons.temperatureLow),
                           weatherRow(
                               'Percieved ',
