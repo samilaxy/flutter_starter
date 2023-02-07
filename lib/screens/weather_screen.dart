@@ -18,7 +18,7 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
   final TextEditingController txtPlace = TextEditingController();
-  Weather result = Weather('', '-- --', 0, 0, 0, '03d');
+  Weather result = Weather('-- --', '-- --', 0, 0, 0, '03d');
 
   String icon_url = 'http://openweathermap.org/img/w/';
 
@@ -76,11 +76,13 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                       blurRadius: 4.0,
                                       color: Colors.white60)
                                 ])),
-                        Image.network(
-                          '${icon_url}${result.icon}.png',
-                          fit: BoxFit.fitHeight,
-                          height: 70,
-                          // width: 100,
+                        SizedBox(
+                          child: Image.network(
+                            '${icon_url}${result.icon}.png',
+                            fit: BoxFit.fitHeight,
+                            height: 70,
+                            // width: 100,
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 2),
@@ -111,19 +113,42 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       // height: 350,
                       // width: 300,
                       child: Padding(
-                        padding: const EdgeInsets.symmetric(vertical: 30),
+                        padding: const EdgeInsets.only(bottom: 20, top: 10),
                         child: Column(children: [
-                          Text(result.description.capitalized(),
-                              style: const TextStyle(
-                                  fontSize: 18,
-                                  color: Colors.black,
-                                  shadows: [
-                                    Shadow(
-                                        offset: Offset(1.0, 1.0),
-                                        blurRadius: 2.0,
-                                        color: Colors.white)
-                                  ])),
-                          Divider(),
+                          Padding(
+                            padding:
+                                const EdgeInsets.symmetric(horizontal: 30.0),
+                            child: Row(
+                              children: [
+                                Expanded(
+                                  child: Container(
+                                    height: 20,
+                                    child: Image.network(
+                                      '${icon_url}${result.icon}.png',
+                                      // fit: BoxFit.fitHeight,
+                                      // height: 20,
+                                      // width: 100,
+                                    ),
+                                  ),
+                                  flex: 2,
+                                ),
+                                Expanded(
+                                  child: Text(result.description.capitalized(),
+                                      style: const TextStyle(
+                                          fontSize: 20,
+                                          color: Colors.black,
+                                          shadows: [
+                                            Shadow(
+                                                offset: Offset(1.0, 1.0),
+                                                blurRadius: 2.0,
+                                                color: Colors.white)
+                                          ])),
+                                  flex: 5,
+                                )
+                              ],
+                            ),
+                          ),
+                          const Divider(thickness: 1.5),
                           weatherRow(
                               'Temperature ',
                               '${result.temperature.toStringAsFixed(0)}°C',
