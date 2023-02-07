@@ -3,7 +3,9 @@ import 'package:flutter_starter/data/weather.dart';
 import '../shared/menu_drawer.dart';
 import '../shared/menu_bottom.dart';
 import '../data/http_helper.dart';
-import 'package:location/location.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+//import 'package:weather_icons/weather_icons.dart';
+//import 'package:location/location.dart';
 //import 'GetLocation.dart';
 
 class WeatherScreen extends StatefulWidget {
@@ -17,6 +19,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
   final TextEditingController txtPlace = TextEditingController();
   Weather result = Weather('', '', 0, 0, 0, '');
   String icon_url = 'http://openweathermap.org/img/w/';
+  var now = DateTime.now();
 //'', '', 0, 0, 0, 0,''
   @override
   Widget build(BuildContext context) {
@@ -33,7 +36,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
           decoration: const BoxDecoration(
               color: Colors.white24,
               image: DecorationImage(
-                image: AssetImage('assets/cloud.jpeg'),
+                image: AssetImage('assets/cloud1.avif'),
                 fit: BoxFit.cover,
               )),
           child: ListView(
@@ -61,9 +64,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       child: Column(children: [
                         Image.network(
                           '${icon_url}${result.icon}.png',
+                          fit: BoxFit.fitHeight,
                           height: 80,
                           width: 100,
-                          scale: 1,
                         ),
 
                         //  Icon(result.icon, color: Colors.blueGrey, size: 100.0),
@@ -98,15 +101,16 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           weatherRow(
                               'Temperature ',
                               result.temperature.toStringAsFixed(0) + '°C',
-                              Icons.wb_sunny),
+                              FontAwesomeIcons.temperatureLow),
                           weatherRow(
                               'Percieved ',
                               result.percieved.toStringAsFixed(2),
-                              Icons.waterfall_chart_sharp),
+                              FontAwesomeIcons
+                                  .personWalkingDashedLineArrowRight),
                           weatherRow('Pressure ', result.pressure.toString(),
-                              Icons.access_alarm),
+                              Icons.wb_sunny_rounded),
                           weatherRow('Humidity ', result.humidity.toString(),
-                              Icons.access_alarm)
+                              FontAwesomeIcons.waveSquare)
                         ]),
                       )),
                 ),
@@ -135,7 +139,7 @@ Widget weatherRow(String label, String value, IconData icon) {
       padding: EdgeInsets.all(16),
       child: Row(children: [
         Expanded(
-          child: Icon(icon, color: Colors.indigoAccent, size: 40.0),
+          child: Icon(icon, color: Colors.black45, size: 40.0),
           flex: 2,
         ),
         Expanded(
