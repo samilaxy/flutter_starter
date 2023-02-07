@@ -89,6 +89,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           child: Text(result.name,
                               style: const TextStyle(
                                   fontSize: 25,
+                                  fontFamily: 'Roboto',
                                   color: Colors.black,
                                   shadows: [
                                     Shadow(
