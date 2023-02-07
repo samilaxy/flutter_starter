@@ -79,10 +79,10 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         SizedBox(
                           child: Image.network(
                             '${icon_url}${result.icon}.png',
-                            fit: BoxFit.fitHeight,
-                            //  height: 70,
-                            // width: 100,
+                            // fit: BoxFit.fitHeight,
                           ),
+                          height: 70,
+                          // width: 100,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 2),
@@ -118,34 +118,37 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           Padding(
                             padding:
                                 const EdgeInsets.symmetric(horizontal: 30.0),
-                            child: Row(
-                              children: [
-                                Expanded(
-                                  child: Container(
-                                    height: 20,
-                                    child: Image.network(
-                                      '${icon_url}${result.icon}.png',
-                                      // fit: BoxFit.fitHeight,
-                                      // height: 20,
-                                      // width: 100,
+                            child: Center(
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    child: Container(
+                                      height: 30,
+                                      child: SizedBox(
+                                        child: Image.network(
+                                          '${icon_url}${result.icon}.png',
+                                        ),
+                                        height: 40,
+                                      ),
                                     ),
+                                    flex: 4,
                                   ),
-                                  flex: 2,
-                                ),
-                                Expanded(
-                                  child: Text(result.description.capitalized(),
-                                      style: const TextStyle(
-                                          fontSize: 20,
-                                          color: Colors.black,
-                                          shadows: [
-                                            Shadow(
-                                                offset: Offset(1.0, 1.0),
-                                                blurRadius: 2.0,
-                                                color: Colors.white)
-                                          ])),
-                                  flex: 5,
-                                )
-                              ],
+                                  Expanded(
+                                    child: Text(
+                                        result.description.capitalized(),
+                                        style: const TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            shadows: [
+                                              Shadow(
+                                                  offset: Offset(1.0, 1.0),
+                                                  blurRadius: 2.0,
+                                                  color: Colors.white)
+                                            ])),
+                                    flex: 4,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           const Divider(thickness: 1.5),
