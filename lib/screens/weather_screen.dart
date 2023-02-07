@@ -25,8 +25,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Weather', style: TextStyle(color: Colors.white)),
-        backgroundColor: Colors.black54,
+        title: const Text('Weather', style: TextStyle(color: Colors.white70)),
+        backgroundColor: Colors.grey,
       ),
       drawer: const MenuDrawer(),
       bottomNavigationBar: const MenuBottom(),

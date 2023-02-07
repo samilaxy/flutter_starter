@@ -40,8 +40,8 @@ class _BmiScreenState extends State<BmiScreen> {
     return Scaffold(
         appBar: AppBar(
           title: const Text('BMI Calculator',
-              style: TextStyle(color: Colors.black)),
-          backgroundColor: Colors.white30,
+              style: TextStyle(color: Colors.white70)),
+          backgroundColor: Colors.grey,
         ),
         drawer: const MenuDrawer(),
         bottomNavigationBar: const MenuBottom(),
@@ -84,9 +84,10 @@ class _BmiScreenState extends State<BmiScreen> {
                   padding: const EdgeInsets.only(top: 40, bottom: 20),
                   child: PlatformElevatedButton(
                       onPressed: findBMI,
-                      color: Colors.black,
+                      color: Colors.black26,
                       child: Text('Calculate BMI',
-                          style: TextStyle(fontSize: fontSize))),
+                          style: TextStyle(
+                              fontSize: fontSize, color: Colors.black87))),
                 ),
                 Text(
                   result,
