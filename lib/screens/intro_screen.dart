@@ -10,8 +10,8 @@ class IntroScreen extends StatelessWidget {
     return Scaffold(
         appBar: AppBar(
           title:
-              const Text('MyManchodf', style: TextStyle(color: Colors.black)),
-          backgroundColor: Colors.white30,
+              const Text('MyManchodf', style: TextStyle(color: Colors.white70)),
+          backgroundColor: Colors.grey,
         ),
         drawer: const MenuDrawer(),
         bottomNavigationBar: const MenuBottom(),

@@ -9,6 +9,7 @@ class MenuDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
+      backgroundColor: Colors.grey,
       child: ListView(
         children: buildMenuItems(context),
       ),
