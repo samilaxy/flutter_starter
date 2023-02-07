@@ -40,7 +40,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
           decoration: const BoxDecoration(
               color: Colors.white24,
               image: DecorationImage(
-                image: AssetImage('assets/cloud.jpeg'),
+                image: AssetImage('assets/mountain.jpeg'),
                 fit: BoxFit.cover,
               )),
           child: ListView(
@@ -49,10 +49,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   padding:
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                   child: TextField(
+                      onEditingComplete: getData,
                       controller: txtPlace,
                       decoration: InputDecoration(
                           hintText: 'Enter city..',
                           suffixIcon: IconButton(
+                              color: Colors.white54,
                               onPressed: getData,
                               icon: const Icon(Icons.search))))),
               Padding(
@@ -69,33 +71,34 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         Text(now,
                             style: const TextStyle(
                                 fontSize: 15,
-                                color: Colors.black,
+                                color: Colors.white,
+                                fontFamily: 'Roboto',
                                 shadows: [
                                   Shadow(
-                                      offset: Offset(0.5, 0.5),
-                                      blurRadius: 4.0,
-                                      color: Colors.white60)
+                                      offset: Offset(1.0, 1.0),
+                                      blurRadius: 2.0,
+                                      color: Colors.black)
                                 ])),
                         SizedBox(
-                          child: Image.network(
-                            '${icon_url}${result.icon}.png',
-                            fit: BoxFit.fitHeight,
-                            //  height: 70,
-                            // width: 100,
-                          ),
+                          child: Image.network('${icon_url}${result.icon}.png'),
+                          height: 70,
+                          // width: 100,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 2),
-                          child: Text(result.name,
-                              style: const TextStyle(
-                                  fontSize: 25,
-                                  color: Colors.black,
-                                  shadows: [
-                                    Shadow(
-                                        offset: Offset(1.0, 1.0),
-                                        blurRadius: 2.0,
-                                        color: Colors.white)
-                                  ])),
+                          child: Text(
+                            result.name,
+                            style: TextStyle(
+                                fontSize: 25,
+                                color: Colors.white,
+                                fontFamily: 'Roboto',
+                                shadows: [
+                                  Shadow(
+                                      offset: Offset(1.0, 1.0),
+                                      blurRadius: 2.0,
+                                      color: Colors.black)
+                                ]),
+                          ),
                         )
                       ]),
                     )),
@@ -109,43 +112,60 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         borderRadius: BorderRadius.all(Radius.circular(10)),
                         color: Colors.black12,
                       ),
-                      //color: Colors.black12,
-                      // height: 350,
-                      // width: 300,
                       child: Padding(
                         padding: const EdgeInsets.only(bottom: 20, top: 10),
                         child: Column(children: [
                           Padding(
                             padding:
-                                const EdgeInsets.symmetric(horizontal: 30.0),
-                            child: Row(
-                              children: [
-                                Expanded(
-                                  child: Container(
-                                    height: 20,
-                                    child: Image.network(
-                                      '${icon_url}${result.icon}.png',
-                                      // fit: BoxFit.fitHeight,
-                                      // height: 20,
-                                      // width: 100,
+                                const EdgeInsets.symmetric(horizontal: 20.0),
+                            child: Center(
+                              child: Row(
+                                children: [
+                                  Expanded(
+                                    child: Center(
+                                      child: Text('Today',
+                                          style: const TextStyle(
+                                              fontSize: 15,
+                                              color: Colors.white,
+                                              fontFamily: 'Roboto',
+                                              shadows: [
+                                                Shadow(
+                                                    offset: Offset(1.0, 1.0),
+                                                    blurRadius: 2.0,
+                                                    color: Colors.black)
+                                              ])),
                                     ),
+                                    flex: 3,
                                   ),
-                                  flex: 2,
-                                ),
-                                Expanded(
-                                  child: Text(result.description.capitalized(),
-                                      style: const TextStyle(
-                                          fontSize: 20,
-                                          color: Colors.black,
-                                          shadows: [
-                                            Shadow(
-                                                offset: Offset(1.0, 1.0),
-                                                blurRadius: 2.0,
-                                                color: Colors.white)
-                                          ])),
-                                  flex: 5,
-                                )
-                              ],
+                                  Expanded(
+                                    child: Container(
+                                      height: 30,
+                                      child: SizedBox(
+                                        child: Image.network(
+                                          '${icon_url}${result.icon}.png',
+                                        ),
+                                        height: 40,
+                                      ),
+                                    ),
+                                    flex: 3,
+                                  ),
+                                  Expanded(
+                                    child: Text(
+                                        result.description.capitalized(),
+                                        style: const TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.white,
+                                            fontFamily: 'Roboto',
+                                            shadows: [
+                                              Shadow(
+                                                  offset: Offset(1.0, 1.0),
+                                                  blurRadius: 2.0,
+                                                  color: Colors.black)
+                                            ])),
+                                    flex: 5,
+                                  )
+                                ],
+                              ),
                             ),
                           ),
                           const Divider(thickness: 1.5),
@@ -161,7 +181,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           weatherRow('Pressure ', result.pressure.toString(),
                               Icons.wb_sunny_rounded),
                           weatherRow('Humidity ', result.humidity.toString(),
-                              FontAwesomeIcons.waveSquare)
+                              FontAwesomeIcons.waveSquare),
                         ]),
                       )),
                 ),
@@ -190,7 +210,7 @@ Widget weatherRow(String label, String value, IconData icon) {
       padding: EdgeInsets.all(16),
       child: Row(children: [
         Expanded(
-          child: Icon(icon, color: Colors.black45, size: 40.0),
+          child: Icon(icon, color: Colors.white54, size: 30.0),
           flex: 2,
         ),
         Expanded(
@@ -198,12 +218,12 @@ Widget weatherRow(String label, String value, IconData icon) {
             child: Text(label,
                 style: const TextStyle(
                     fontSize: 18,
-                    color: Colors.black,
+                    color: Colors.white70,
                     shadows: [
                       Shadow(
                           offset: Offset(1.0, 1.0),
                           blurRadius: 2.0,
-                          color: Colors.white)
+                          color: Colors.black)
                     ])),
           ),
           flex: 4,
@@ -212,12 +232,13 @@ Widget weatherRow(String label, String value, IconData icon) {
           child: Text(value,
               style: const TextStyle(
                   fontSize: 18,
-                  color: Colors.black,
+                  fontFamily: 'Roboto',
+                  color: Colors.white70,
                   shadows: [
                     Shadow(
                         offset: Offset(1.0, 1.0),
                         blurRadius: 2.0,
-                        color: Colors.white)
+                        color: Colors.black)
                   ])),
           flex: 2,
         )
