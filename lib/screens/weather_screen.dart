@@ -151,6 +151,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                   ),
                                   Expanded(
                                     child: Text(
+                                      
                                         result.description.capitalized(),
                                         style: const TextStyle(
                                             fontSize: 18,
