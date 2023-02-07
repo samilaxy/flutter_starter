@@ -18,7 +18,7 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
   final TextEditingController txtPlace = TextEditingController();
-  Weather result = Weather('', '', 0, 0, 0, '03d');
+  Weather result = Weather('', '-- --', 0, 0, 0, '03d');
 
   String icon_url = 'http://openweathermap.org/img/w/';
 
@@ -66,34 +66,35 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     child: Padding(
                       padding: const EdgeInsets.only(top: 10),
                       child: Column(children: [
-                        Text(now.toString(),
+                        Text(now,
                             style: const TextStyle(
                                 fontSize: 15,
                                 color: Colors.black,
                                 shadows: [
                                   Shadow(
-                                      offset: Offset(1.0, 1.0),
-                                      blurRadius: 2.0,
-                                      color: Colors.white)
+                                      offset: Offset(0.5, 0.5),
+                                      blurRadius: 4.0,
+                                      color: Colors.white60)
                                 ])),
                         Image.network(
                           '${icon_url}${result.icon}.png',
-                          // fit: BoxFit.fitHeight,
-                          // height: 80,
+                          fit: BoxFit.fitHeight,
+                          height: 70,
                           // width: 100,
                         ),
-
-                        //  Icon(result.icon, color: Colors.blueGrey, size: 100.0),
-                        Text(result.description,
-                            style: const TextStyle(
-                                fontSize: 25,
-                                color: Colors.black,
-                                shadows: [
-                                  Shadow(
-                                      offset: Offset(1.0, 1.0),
-                                      blurRadius: 2.0,
-                                      color: Colors.white)
-                                ]))
+                        Padding(
+                          padding: const EdgeInsets.only(bottom: 2),
+                          child: Text(result.name,
+                              style: const TextStyle(
+                                  fontSize: 25,
+                                  color: Colors.black,
+                                  shadows: [
+                                    Shadow(
+                                        offset: Offset(1.0, 1.0),
+                                        blurRadius: 2.0,
+                                        color: Colors.white)
+                                  ])),
+                        )
                       ]),
                     )),
               ),
@@ -112,6 +113,17 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       child: Padding(
                         padding: const EdgeInsets.symmetric(vertical: 30),
                         child: Column(children: [
+                          Text(result.description.capitalized(),
+                              style: const TextStyle(
+                                  fontSize: 18,
+                                  color: Colors.black,
+                                  shadows: [
+                                    Shadow(
+                                        offset: Offset(1.0, 1.0),
+                                        blurRadius: 2.0,
+                                        color: Colors.white)
+                                  ])),
+                          Divider(),
                           weatherRow(
                               'Temperature ',
                               '${result.temperature.toStringAsFixed(0)}°C',
@@ -141,7 +153,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
     if (location.isNotEmpty) {
       HttpHelper helper = HttpHelper();
       result = await helper.getWeather(txtPlace.text);
-      print('qwer: ${result.icon}.png');
+      print('qwer: ${result.name}.png');
     }
     setState(() {});
   }
@@ -200,3 +212,7 @@ Widget weatherRow(String label, String value, IconData icon) {
 //   city = getlocation.city;
 //   getTemp(getlocation.latitude, getlocation.longitude);
 // }
+extension Capitalized on String {
+  String capitalized() =>
+      this.substring(0, 1).toUpperCase() + this.substring(1).toLowerCase();
+}
