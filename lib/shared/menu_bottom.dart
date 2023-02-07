@@ -8,6 +8,7 @@ class MenuBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+        backgroundColor: Colors.grey,
         onTap: (int index) {
           switch (index) {
             case 0:
