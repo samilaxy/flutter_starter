@@ -40,7 +40,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
           decoration: const BoxDecoration(
               color: Colors.white24,
               image: DecorationImage(
-                image: AssetImage('assets/cloud.jpeg'),
+                image: AssetImage('assets/backCloud.jpg'),
                 fit: BoxFit.cover,
               )),
           child: ListView(
@@ -86,17 +86,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         ),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 2),
-                          child: Text(result.name,
-                              style: const TextStyle(
-                                  fontSize: 25,
-                                  fontFamily: 'Roboto',
-                                  color: Colors.black,
-                                  shadows: [
-                                    Shadow(
-                                        offset: Offset(1.0, 1.0),
-                                        blurRadius: 2.0,
-                                        color: Colors.white)
-                                  ])),
+                          child: Text(
+                            result.name,
+                            style: TextStyle(
+                              fontSize: 25,
+                              color: Colors.white,
+                              fontFamily: 'Roboto',
+                            ),
+                          ),
                         )
                       ]),
                     )),
@@ -123,6 +120,20 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               child: Row(
                                 children: [
                                   Expanded(
+                                    child: Text('Today',
+                                        style: const TextStyle(
+                                            fontSize: 18,
+                                            color: Colors.black,
+                                            fontFamily: 'Roboto',
+                                            shadows: [
+                                              Shadow(
+                                                  offset: Offset(1.0, 1.0),
+                                                  blurRadius: 2.0,
+                                                  color: Colors.white)
+                                            ])),
+                                    flex: 2,
+                                  ),
+                                  Expanded(
                                     child: Container(
                                       height: 30,
                                       child: SizedBox(
@@ -132,7 +143,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                         height: 40,
                                       ),
                                     ),
-                                    flex: 4,
+                                    flex: 3,
                                   ),
                                   Expanded(
                                     child: Text(
@@ -140,13 +151,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                         style: const TextStyle(
                                             fontSize: 18,
                                             color: Colors.black,
+                                            fontFamily: 'Roboto',
                                             shadows: [
                                               Shadow(
                                                   offset: Offset(1.0, 1.0),
                                                   blurRadius: 2.0,
                                                   color: Colors.white)
                                             ])),
-                                    flex: 4,
+                                    flex: 5,
                                   )
                                 ],
                               ),
@@ -165,7 +177,25 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           weatherRow('Pressure ', result.pressure.toString(),
                               Icons.wb_sunny_rounded),
                           weatherRow('Humidity ', result.humidity.toString(),
-                              FontAwesomeIcons.waveSquare)
+                              FontAwesomeIcons.waveSquare),
+                          Container(
+                            child: Center(
+                              child: Text(
+                                result.name,
+                                style: TextStyle(
+                                  fontSize: 25,
+                                  color: Colors.white,
+                                  fontFamily: 'Roboto',
+                                ),
+                              ),
+                            ),
+                          ),
+                          Container(
+                            child: Icon(
+                              FontAwesomeIcons.locationArrow,
+                              color: Colors.white,
+                            ),
+                          ),
                         ]),
                       )),
                 ),
@@ -216,6 +246,7 @@ Widget weatherRow(String label, String value, IconData icon) {
           child: Text(value,
               style: const TextStyle(
                   fontSize: 18,
+                  fontFamily: 'Roboto',
                   color: Colors.black,
                   shadows: [
                     Shadow(
