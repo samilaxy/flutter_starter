@@ -18,11 +18,13 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
   final TextEditingController txtPlace = TextEditingController();
-  Weather result = Weather('', '', 0, 0, 0, '');
+  Weather result = Weather('', '', 0, 0, 0, '03d');
+
   String icon_url = 'http://openweathermap.org/img/w/';
-  var now = DateTime.now();
-  // DateFormat dateFormat = new DateFormat.Hm();
-//'', '', 0, 0, 0, 0,''
+
+  // Formatted Date
+  var now = (DateFormat.yMMMEd().format(DateTime.now())).toString();
+  //
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -76,9 +78,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                 ])),
                         Image.network(
                           '${icon_url}${result.icon}.png',
-                          fit: BoxFit.fitHeight,
-                          height: 80,
-                          width: 100,
+                          // fit: BoxFit.fitHeight,
+                          // height: 80,
+                          // width: 100,
                         ),
 
                         //  Icon(result.icon, color: Colors.blueGrey, size: 100.0),
