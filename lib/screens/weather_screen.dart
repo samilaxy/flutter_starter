@@ -18,7 +18,7 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
   final TextEditingController txtPlace = TextEditingController();
-  Weather result = Weather('-- --', '-- --', 0, 0, 0, '03d');
+  Weather result = Weather('-- --', '-- --', 0, 0, 0, '03d', '', '');
 
   String icon_url = 'http://openweathermap.org/img/w/';
 
@@ -58,10 +58,17 @@ class _WeatherScreenState extends State<WeatherScreen> {
                               vertical: 10.0, horizontal: 20),
                           labelStyle: TextStyle(color: Colors.white60),
                           hintStyle: TextStyle(color: Colors.white54),
+                          focusedBorder: OutlineInputBorder(
+                              borderRadius: new BorderRadius.circular(25.0),
+                              borderSide: const BorderSide(
+                                  color: Colors.white38, width: 2.0)),
+                          enabledBorder: OutlineInputBorder(
+                              borderRadius: new BorderRadius.circular(25.0),
+                              borderSide: const BorderSide(
+                                  color: Colors.white38, width: 2.0)),
                           border: OutlineInputBorder(
-                              borderSide: BorderSide(
-                                color: Colors.white54,
-                              ),
+                              borderSide:
+                                  BorderSide(color: Colors.white, width: 2.0),
                               borderRadius: BorderRadius.circular(30)),
                           suffixIcon: IconButton(
                               color: Colors.white54,
@@ -207,9 +214,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
     String location = txtPlace.text;
     if (location.isNotEmpty) {
       HttpHelper helper = HttpHelper();
-      result = await helper.getWeather(txtPlace.text);
-      print('qwer: ${result.name}.png');
+      result = await helper.getWeather(location);
     }
+
     setState(() {});
   }
 }
