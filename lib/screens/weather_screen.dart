@@ -88,7 +88,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         Padding(
                           padding: const EdgeInsets.only(bottom: 2),
                           child: Text(
-                            result.name,
+                            result.name +
+                                ' ${result.temperature.toStringAsFixed(0)}°',
                             style: TextStyle(
                                 fontSize: 25,
                                 color: Colors.white,
