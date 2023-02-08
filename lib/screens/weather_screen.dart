@@ -50,6 +50,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
                   child: TextField(
                       onEditingComplete: getData,
+                      cursorColor: Colors.white54,
                       controller: txtPlace,
                       decoration: InputDecoration(
                           hintText: 'Enter city..',
@@ -62,7 +63,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                 child: Container(
                     decoration: const BoxDecoration(
                       borderRadius: BorderRadius.all(Radius.circular(10)),
-                      color: Colors.black12,
+                      color: Colors.black26,
                     ),
                     height: 150,
                     child: Padding(
@@ -87,7 +88,8 @@ class _WeatherScreenState extends State<WeatherScreen> {
                         Padding(
                           padding: const EdgeInsets.only(bottom: 2),
                           child: Text(
-                            result.name,
+                            result.name +
+                                ' ${result.temperature.toStringAsFixed(0)}°',
                             style: TextStyle(
                                 fontSize: 25,
                                 color: Colors.white,
@@ -110,7 +112,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                   child: Container(
                       decoration: const BoxDecoration(
                         borderRadius: BorderRadius.all(Radius.circular(10)),
-                        color: Colors.black12,
+                        color: Colors.black26,
                       ),
                       child: Padding(
                         padding: const EdgeInsets.only(bottom: 20, top: 10),
