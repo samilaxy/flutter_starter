@@ -54,7 +54,15 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       controller: txtPlace,
                       decoration: InputDecoration(
                           hintText: 'Enter city..',
+                          contentPadding: EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 20),
+                          labelStyle: TextStyle(color: Colors.white60),
                           hintStyle: TextStyle(color: Colors.white54),
+                          border: OutlineInputBorder(
+                              borderSide: BorderSide(
+                                color: Colors.white54,
+                              ),
+                              borderRadius: BorderRadius.circular(30)),
                           suffixIcon: IconButton(
                               color: Colors.white54,
                               onPressed: getData,
