@@ -67,7 +67,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                     ),
                     height: 150,
                     child: Padding(
-                      padding: const EdgeInsets.only(top: 10),
+                      padding: const EdgeInsets.only(top: 15),
                       child: Column(children: [
                         Text(now,
                             style: const TextStyle(
