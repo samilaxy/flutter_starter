@@ -54,6 +54,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       controller: txtPlace,
                       decoration: InputDecoration(
                           hintText: 'Enter city..',
+                          hintStyle: TextStyle(color: Colors.white24),
                           suffixIcon: IconButton(
                               color: Colors.white54,
                               onPressed: getData,
@@ -89,7 +90,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           padding: const EdgeInsets.only(bottom: 2),
                           child: Text(
                             '${result.name} ${result.temperature.toStringAsFixed(0)}°',
-                            style: const TextStyle(
+                            style: TextStyle(
                                 fontSize: 25,
                                 color: Colors.white,
                                 fontFamily: 'Roboto',
