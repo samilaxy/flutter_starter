@@ -81,15 +81,14 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                       color: Colors.black)
                                 ])),
                         SizedBox(
-                          child: Image.network('${icon_url}${result.icon}.png'),
                           height: 70,
+                          child: Image.network('$icon_url${result.icon}.png'),
                           // width: 100,
                         ),
                         Padding(
                           padding: const EdgeInsets.only(bottom: 2),
                           child: Text(
-                            result.name +
-                                ' ${result.temperature.toStringAsFixed(0)}°',
+                            '${result.name} ${result.temperature.toStringAsFixed(0)}°',
                             style: TextStyle(
                                 fontSize: 25,
                                 color: Colors.white,
