@@ -1,5 +1,3 @@
-import 'dart:io';
-
 class Weather {
   String name = '';
   String description = '';
@@ -7,7 +5,7 @@ class Weather {
   double percieved = 0;
   int pressure = 0;
   int humidity = 0;
-  String icon = '03d';
+  String icon = '';
   String cod = '';
   String message = '';
 
@@ -20,19 +18,12 @@ class Weather {
     percieved = (weatherMap['main']['feels_like']) ?? 0;
     pressure = (weatherMap['main']['pressure']) ?? 0;
     description = (weatherMap['weather'][0]['description']) ?? '';
-    String icon_url = (weatherMap['weather'][0]['icon']);
-    try {
-      icon = 'http://openweathermap.org/img/w/$icon_url${icon_url}.png';
-    } on SocketException {
-      print('No Internet connection 😑');
-    } on HttpException {
-      print("Couldn't find the post 😱");
-    } on FormatException {
-      print("Bad response format 👎");
-    }
-
-    // this.cod = weatherMap['cod'];
-    // this.message = weatherMap['massage'];
-    // print(cod);
+    String iconUrl = (weatherMap['weather'][0]['icon']);
+    icon = 'http://openweathermap.org/img/w/${iconUrl}.png';
+    
+    
+   // this.cod = weatherMap['cod'];
+   // this.message = weatherMap['massage'];
+   // print(cod);
   }
 }
