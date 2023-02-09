@@ -19,8 +19,10 @@ class Weather {
     pressure = (weatherMap['main']['pressure']) ?? 0;
     description = (weatherMap['weather'][0]['description']) ?? '';
     icon = (weatherMap['weather'][0]['icon']);
-    try
-    String icon_url = 'http://openweathermap.org/img/w/';
+    try{
+      String icon_url = 'http://openweathermap.org/img/w/$icon_url${icon}.png';
+    }
+    
    // this.cod = weatherMap['cod'];
    // this.message = weatherMap['massage'];
    // print(cod);
