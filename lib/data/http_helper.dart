@@ -10,7 +10,7 @@ class HttpHelper {
   final String authority = 'api.openweathermap.org';
   final String path = 'data/2.5/weather';
   final String apiKey = '11eba8bb941dd6ed614b3014924cfb60';
-  Weather weather = Weather('', '', 0, 0, 0, '', '', '');
+  Weather weather = Weather('', '', 0, 0, 0, '03d', '', '');
 
   Future<Weather> getWeather(String location) async {
     Map<String, dynamic> parameters = {'q': location, 'appid': apiKey};
@@ -24,7 +24,10 @@ class HttpHelper {
     try {
       http.Response result = await http.get(uri);
       Map<String, dynamic> data = jsonDecode(result.body);
-      if (result.statusCode != 200) throw HttpException('${result.statusCode}');
+      if (result.statusCode != 200) {
+        throw HttpException('${result.statusCode}');
+      }
+      
        weather = Weather.fromJson(data);
       
     } on SocketException {

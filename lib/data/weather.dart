@@ -1,3 +1,5 @@
+import 'dart:io';
+
 class Weather {
   String name = '';
   String description = '';
@@ -5,7 +7,7 @@ class Weather {
   double percieved = 0;
   int pressure = 0;
   int humidity = 0;
-  String icon = '';
+  String icon = '03d';
   String cod = '';
   String message = '';
 
@@ -13,14 +15,24 @@ class Weather {
       this.pressure, this.icon, this.cod, this.message);
 
   Weather.fromJson(Map<String, dynamic> weatherMap) {
-    this.name = weatherMap['name'];
-    this.temperature = (weatherMap['main']['temp'] - 273.15) ?? 0;
-    this.percieved = (weatherMap['main']['feels_like']) ?? 0;
-    this.pressure = (weatherMap['main']['pressure']) ?? 0;
-    this.description = (weatherMap['weather'][0]['description']) ?? '';
-    this.icon = (weatherMap['weather'][0]['icon']);
-   // this.cod = weatherMap['cod'];
-   // this.message = weatherMap['massage'];
-   // print(cod);
+    name = weatherMap['name'];
+    temperature = (weatherMap['main']['temp'] - 273.15) ?? 0;
+    percieved = (weatherMap['main']['feels_like']) ?? 0;
+    pressure = (weatherMap['main']['pressure']) ?? 0;
+    description = (weatherMap['weather'][0]['description']) ?? '';
+    String icon_url = (weatherMap['weather'][0]['icon']);
+    try {
+      icon = 'http://openweathermap.org/img/w/$icon_url${icon_url}.png';
+    } on SocketException {
+      print('No Internet connection 😑');
+    } on HttpException {
+      print("Couldn't find the post 😱");
+    } on FormatException {
+      print("Bad response format 👎");
+    }
+
+    // this.cod = weatherMap['cod'];
+    // this.message = weatherMap['massage'];
+    // print(cod);
   }
 }

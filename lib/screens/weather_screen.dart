@@ -98,7 +98,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                 ])),
                         SizedBox(
                           height: 70,
-                          child: Image.network('$icon_url${result.icon}.png'),
+                          child: Image.network(result.icon),
                           // width: 100,
                         ),
                         Padding(
@@ -158,9 +158,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                     child: Container(
                                       height: 30,
                                       child: SizedBox(
-                                        child: Image.network(
-                                          '${icon_url}${result.icon}.png',
-                                        ),
+                                        child: Image.network(result.icon),
                                         height: 40,
                                       ),
                                     ),
