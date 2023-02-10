@@ -27,9 +27,9 @@ class HttpHelper {
       if (result.statusCode != 200) {
         throw HttpException('${result.statusCode}');
       }
-      
-       weather = Weather.fromJson(data);
-      
+
+      weather = Weather.fromJson(data);
+      print(weather);
     } on SocketException {
       print('No Internet connection 😑');
     } on HttpException {

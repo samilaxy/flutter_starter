@@ -18,7 +18,7 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
   final TextEditingController txtPlace = TextEditingController();
-  Weather result = Weather('-- --', '-- --', 0, 0, 0, '03d', '', '');
+  Weather result = Weather('-- --', '-- --', 0, 0, 0, '', '', '');
 
   String icon_url = 'http://openweathermap.org/img/w/';
 
