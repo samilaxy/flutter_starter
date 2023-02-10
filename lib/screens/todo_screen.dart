@@ -25,7 +25,6 @@ class _TodoScreenState extends State<TodoScreen> {
       body: _buildList(),
       bottomNavigationBar: const MenuBottom(),
     );
-
   }
 
   Widget _buildList() {
@@ -69,7 +68,10 @@ class _TodoScreenState extends State<TodoScreen> {
       final List<Widget> divided =
           ListTile.divideTiles(context: context, tiles: tiles).toList();
       return Scaffold(
-          appBar: AppBar(title: Text('Saved WordPairs')),
+          appBar: AppBar(
+              title: Text('Done Workouts',
+                  style: TextStyle(color: Colors.white70))),
+          backgroundColor: Colors.grey,
           body: ListView(children: divided));
     }));
   }
