@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
+import '../shared/menu_bottom.dart';
 
 class TodoScreen extends StatefulWidget {
   const TodoScreen({super.key});
@@ -22,7 +23,9 @@ class _TodoScreenState extends State<TodoScreen> {
             IconButton(onPressed: _pushSaved, icon: Icon(Icons.list))
           ]),
       body: _buildList(),
+      bottomNavigationBar: const MenuBottom(),
     );
+
   }
 
   Widget _buildList() {
