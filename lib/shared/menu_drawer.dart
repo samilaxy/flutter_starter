@@ -46,7 +46,7 @@ class MenuDrawer extends StatelessWidget {
             case 'Weather':
               screen = const WeatherScreen();
               break;
-            case 'Tasks':
+            case 'Workouts Todo':
               screen = const TodoScreen();
               break;
           }
