@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
 class WorkoutScreen extends StatefulWidget {
+  const WorkoutScreen({super.key});
   @override
   WorkoutScreenState createState() => WorkoutScreenState();
 }
