@@ -24,6 +24,6 @@ class Weather {
     
    // this.cod = weatherMap['cod'];
    // this.message = weatherMap['massage'];
-   // print(cod);
+    print(icon);
   }
 }
