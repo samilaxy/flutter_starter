@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 
-class RandomWords extends StatefulWidget {
+class WorkoutScreen extends StatefulWidget {
   @override
-  RandomWordsState createState() => RandomWordsState();
+  WorkoutScreenState createState() => WorkoutScreenState();
 }
 
-class RandomWordsState extends State<RandomWords> {
+class WorkoutScreenState extends State<WorkoutScreen> {
   final randomWordPair = <WordPair>[];
   final savedWordPairs = Set<WordPair>();
   Widget _buildList() {
