@@ -3,6 +3,7 @@ import 'package:flutter_starter/screens/weather_screen.dart';
 import '../screens/bmi_screen.dart';
 import '../screens/intro_screen.dart';
 import '../screens/workout_screen.dart';
+import '../screens/todo_screen.dart';
 
 class MenuDrawer extends StatelessWidget {
   const MenuDrawer({super.key});
@@ -46,8 +47,8 @@ class MenuDrawer extends StatelessWidget {
             case 'Weather':
               screen = const WeatherScreen();
               break;
-              case 'Task':
-              screen =  WorkoutScreen();
+            case 'Tasks':
+              screen = const TodoScreen();
               break;
           }
           Navigator.of(context).pop();
