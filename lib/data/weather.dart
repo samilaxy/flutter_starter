@@ -18,12 +18,11 @@ class Weather {
     percieved = (weatherMap['main']['feels_like']) ?? 0;
     pressure = (weatherMap['main']['pressure']) ?? 0;
     description = (weatherMap['weather'][0]['description']) ?? '';
-    String iconUrl = (weatherMap['weather'][0]['icon']);
-    icon = 'http://openweathermap.org/img/w/${iconUrl}.png';
-    
-    
-   // this.cod = weatherMap['cod'];
-   // this.message = weatherMap['massage'];
+    icon = (weatherMap['weather'][0]['icon']);
+   // String iconUrl = 'http://openweathermap.org/img/w/${iconUrl}.png';
+
+    // this.cod = weatherMap['cod'];
+    // this.message = weatherMap['massage'];
     print(icon);
   }
 }

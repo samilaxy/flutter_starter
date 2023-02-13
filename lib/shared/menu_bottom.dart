@@ -8,6 +8,7 @@ class MenuBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.grey,
         onTap: (int index) {
           switch (index) {
@@ -15,6 +16,9 @@ class MenuBottom extends StatelessWidget {
               Navigator.pushNamed(context, '/');
               break;
             case 1:
+              Navigator.pushNamed(context, '/weather');
+              break;
+            case 2:
               Navigator.pushNamed(context, '/bmi');
               break;
           }
@@ -22,9 +26,28 @@ class MenuBottom extends StatelessWidget {
         items: [
           // ignore: prefer_const_constructors
           BottomNavigationBarItem(
-              icon: const Icon(Icons.home_rounded), label: 'Home'),
+              activeIcon: Icon(
+                Icons.home_rounded,
+                color: Colors.white54,
+              ),
+              icon: const Icon(Icons.home_rounded),
+              label: 'Home'),
+
           BottomNavigationBarItem(
-              icon: Icon(Icons.monitor_weight), label: 'BMI')
+              activeIcon: Icon(
+                Icons.home_rounded,
+                color: Colors.white54,
+              ),
+              icon: Icon(Icons.cloud_circle),
+              label:  'Weather'),
+          BottomNavigationBarItem(
+              activeIcon: Icon(
+                Icons.home_rounded,
+                color: Colors.white54,
+              ),
+              icon: Icon(Icons.monitor_weight),
+              label: 'BMI',
+              )
         ]);
   }
 }

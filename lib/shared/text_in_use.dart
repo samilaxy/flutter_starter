@@ -1,3 +1,4 @@
+// ignore: file_names
 class TextInUse {
   final String authority = 'api.openweathermap.org';
   final String iconUrl = 'http://openweathermap.org/img/w/';

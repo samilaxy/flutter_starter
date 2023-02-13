@@ -1,8 +1,8 @@
 version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
-options: "c597bf1a65c225e9f9604487cdad6a7b09455f1a30c0bd782ba69c4b98805539"
-build_start_time: [1675445841, 551084995]
-build_end_time: [1675445857, 646556854]
+options: "cc48c5e2bc9df5a9f626a72178b6bd00b180c97990e838ad7db94ec75d67ba6c"
+build_start_time: [1676142321, 959035873]
+build_end_time: [1676142334, 581007003]
 inputs:
-  "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Flutter/GeneratedPluginRegistrant.swift": [1675445812, 312935352]
+  "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Flutter/GeneratedPluginRegistrant.swift": [1676142287, 604900360]
   "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Runner/AppDelegate.swift": [1671141058, 0]
   "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Runner/MainFlutterWindow.swift": [1671141058, 0]

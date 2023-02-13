@@ -18,7 +18,7 @@
 		</data>
 		<key>Assets.car</key>
 		<data>
-		0a8d38U2LhAtp0VQr4x2uKTA17I=
+		2ka58FT+cPFxb9QWZz9Pu1A6Ues=
 		</data>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
 		<data>
@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		1ToKi8Gdksu1jN9eQQo4Ykih3jA=
+		5DgxT56E4y7cVY8B5xYIHz8REec=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		9XHJAkAUYbIw18r4BqZOGm4/wn0=
+		MT35odTF5aeR5gnoNUbBCfpN6dI=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		leZQYO1Dz63kvYxr5YziIxF7Z5w=
+		7g75jihkeo5RZCLtqDoCOyEqXNc=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -67,10 +67,6 @@
 		<key>Frameworks/App.framework/flutter_assets/NOTICES.Z</key>
 		<data>
 		8I/47ausZG/KVe9zSZZ0gtiLkQQ=
-		</data>
-		<key>Frameworks/App.framework/flutter_assets/assets/HatchfulExport-All.zip</key>
-		<data>
-		Rpok9tMMK5vTUDD3kwlp6I55CxM=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/HatchfulExport-All/facebook_cover_photo_1.png</key>
 		<data>
@@ -148,6 +144,10 @@
 		<data>
 		DR+GU0i2W9h2th4opijczFZYttE=
 		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/iconweather.png</key>
+		<data>
+		2KoUTkFRUILd92ojsNaVgq4dmnQ=
+		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/macho.jpg</key>
 		<data>
 		8wg7am/uoNERNV7kSjIFyLb/0Rk=
@@ -174,7 +174,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		+rYxqGAyoH4pDRwswnOdC2VqOA0=
+		ulMvXiixWt8VRRTOoDKkCORs3Ts=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -344,7 +344,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			0mwDjyFvPjoJ41l3LXn2YfcZh5pfSeVT7dGRV/bILRM=
+			poMI844T49+sRWx5QSlGADvKlUBxE1EBrnMEOxvwyOg=
 			</data>
 		</dict>
 		<key>Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib</key>
@@ -393,7 +393,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			WqMiDydez5BIfvwpn3Yj8+oez0NxhMyG6yyePd5Yn9U=
+			txFX4UTyw+fzsot3SudN1i8n0/wbRZUbdnY1Purq8Po=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -407,14 +407,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			P86FjsBlobS/sN/T99D0/Ag0Ob2EDBPUeTThzCJjaBo=
+			juqXcIYfKSgEsMeETDcmEF+lwSJSHl6uPfYfuCBFkFU=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			zFwGpi3MpVxKkplVfn2uOHcFDnsDwfoDzkQ3nooY6FU=
+			jx7+jR+7AXLlKa0PHGL12nt1+5B9xdTFyQSQ8qdwwpw=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -429,13 +429,6 @@
 			<key>hash2</key>
 			<data>
 			QBh7xJRGWt53Rmv2ptWnVMgmm1Yq9tVxykLhv5pR+vI=
-			</data>
-		</dict>
-		<key>Frameworks/App.framework/flutter_assets/assets/HatchfulExport-All.zip</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			pKv7/+TuWRFsjEY25WC8sdKT/QiKquXfRpbvdmlV7lg=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/HatchfulExport-All/facebook_cover_photo_1.png</key>
@@ -571,6 +564,13 @@
 			0WB+EAXBLzEmpSqqxIJbFYZVtnYd5E6yBb7E0LQ8zlQ=
 			</data>
 		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/iconweather.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			PUFVNr7Mr2XSIOXhYwoG1mxQhlrtM9haKjwxLhA7RRU=
+			</data>
+		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/macho.jpg</key>
 		<dict>
 			<key>hash2</key>
@@ -617,7 +617,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			We5ahX6QnuRtbZ9CwFCsx4BVzFtfisrq6n7J5PSFRo0=
+			NbFVHDMF1eJH00ePsXwx0haBqBJmWxKGzdRaJd5BVuw=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

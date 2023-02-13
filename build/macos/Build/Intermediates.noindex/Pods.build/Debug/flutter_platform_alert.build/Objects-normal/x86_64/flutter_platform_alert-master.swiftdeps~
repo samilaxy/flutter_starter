@@ -1,0 +1,6 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "9172b2bfc40db5a487f4ae39319c3ad9686caa2fdf464d8115b1e45c8a014ba4"
+build_start_time: [1676142300, 651926040]
+build_end_time: [1676142300, 745522022]
+inputs:
+  "/Users/noyesamuel/.pub-cache/hosted/pub.dev/flutter_platform_alert-0.3.0/macos/Classes/FlutterPlatformAlertPlugin.swift": !private [1675546873, 499546289]
