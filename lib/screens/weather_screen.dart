@@ -18,9 +18,9 @@ class WeatherScreen extends StatefulWidget {
 
 class _WeatherScreenState extends State<WeatherScreen> {
   final TextEditingController txtPlace = TextEditingController();
-  Weather result = Weather('-- --', '-- --', 0, 0, 0, '', '', '');
+  Weather result = Weather('-- --', '-- --', 0, 0, 0, '02d', '', '');
 
-  String icon_url = 'http://openweathermap.org/img/w/';
+  String iconUrl = 'http://openweathermap.org/img/w/';
 
   // Formatted Date
   var now = (DateFormat.yMMMEd().format(DateTime.now())).toString();
@@ -97,8 +97,16 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                       color: Colors.black)
                                 ])),
                         SizedBox(
-                          height: 70,
-                          child: Image.network(result.icon),
+                          //height: 70, //${iconUrl}${result.icon}
+                          child: FadeInImage(
+                            placeholder:
+                                const AssetImage('assets/iconweather.png'),
+                            image: NetworkImage('$iconUrl${result.icon}.png'),
+                            imageErrorBuilder: (context, error, stackTrace) {
+                              return Image.asset('', fit: BoxFit.fitWidth);
+                            },
+                            fit: BoxFit.fitWidth,
+                          ), //Image.network(result.icon),
                           // width: 100,
                         ),
                         Padding(
@@ -158,7 +166,18 @@ class _WeatherScreenState extends State<WeatherScreen> {
                                     child: Container(
                                       height: 30,
                                       child: SizedBox(
-                                        child: Image.network(result.icon),
+                                        child: FadeInImage(
+                                          placeholder: const AssetImage(
+                                              'assets/iconweather.png'),
+                                          image: NetworkImage(
+                                              '$iconUrl${result.icon}.png'),
+                                          imageErrorBuilder:
+                                              (context, error, stackTrace) {
+                                            return Image.asset('',
+                                                fit: BoxFit.fitWidth);
+                                          },
+                                          fit: BoxFit.fitWidth,
+                                        ), //Image.network(result.icon),
                                         height: 40,
                                       ),
                                     ),

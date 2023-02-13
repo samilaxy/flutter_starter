@@ -1,0 +1,10 @@
+framework module flutter_platform_alert {
+  umbrella header "flutter_platform_alert-umbrella.h"
+
+  export *
+  module * { export * }
+}
+
+module flutter_platform_alert.__Swift {
+  exclude header "flutter_platform_alert-Swift.h"
+}

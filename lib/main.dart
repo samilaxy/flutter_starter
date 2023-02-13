@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/screens/bmi_screen.dart';
+import 'package:flutter_starter/screens/weather_screen.dart';
 import 'screens/intro_screen.dart';
 
 void main() {
@@ -20,6 +21,7 @@ class MyMancho extends StatelessWidget {
         )),
         routes: {
           '/': (context) => const IntroScreen(),
+          '/weather': (context) => const WeatherScreen(),
           '/bmi': (context) => const BmiScreen(),
         },
         initialRoute: '/');
