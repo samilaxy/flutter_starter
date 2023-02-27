@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/utils/color_utils.dart';
+import '../../shared/custom_widget.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -24,15 +25,10 @@ class _LoginScreenState extends State<LoginScreen> {
                   padding: EdgeInsets.fromLTRB(
                       20, MediaQuery.of(context).size.height * 0.2, 20, 0),
                   child: Column(children: <Widget>[
-                    logoWidget("imageName")
+                    logoWidget("assets/cloud.jpeg'")
                   ])))),
     );
   }
 }
 
-Image logoWidget(String imageName) {
-  return Image.asset(imageName,
-      fit: BoxFit.fitWidth, 
-      width: 240, height: 240, 
-      color: Colors.white);
-}
+
