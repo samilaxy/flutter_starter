@@ -57,9 +57,9 @@ class _SignupScreenState extends State<SignupScreen> {
         GestureDetector(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => SignupScreen()));
+                MaterialPageRoute(builder: (context) => const SignupScreen()));
           },
-          child: const Text("Login",
+          child: const Text(" Login",
               style:
                   TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
         )
@@ -67,5 +67,5 @@ class _SignupScreenState extends State<SignupScreen> {
     );
   }
 
-  signup(context, tr) {}
+  signup() {}
 }
