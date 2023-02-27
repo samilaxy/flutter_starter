@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       SizedBox(
                         height: 30,
                       ),
-                      customButton(context, "Sign Up", login),
+                      customButton(context, "Log In", login),
                       loginOption()
                     ]))),
           )),
@@ -57,8 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
             style: TextStyle(color: Colors.white70)),
         GestureDetector(
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const SignupScreen()));
+            Navigator.pushNamed(context,"/signup");
           },
           child: const Text(" Sign Up",
               style:
@@ -68,8 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
     );
   }
 
-  login() {}
+  login() {
+    // Navigator.pushNamed(context,"/signup");
+  }
 }
-
-
-

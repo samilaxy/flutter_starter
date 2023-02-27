@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/screens/auth/login_screen.dart';
+import 'package:flutter_starter/screens/intro_screen.dart';
 import 'package:flutter_starter/utils/color_utils.dart';
 import '../../shared/custom_widget.dart';
 
@@ -79,8 +80,7 @@ class _SignupScreenState extends State<SignupScreen> {
             style: TextStyle(color: Colors.white70)),
         GestureDetector(
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const LoginScreen()));
+            Navigator.pushNamed(context,"/");
           },
           child: const Text(" Login",
               style:
@@ -90,5 +90,10 @@ class _SignupScreenState extends State<SignupScreen> {
     );
   }
 
-  signup() {}
+  signup() {
+    print("object");
+    //   Navigator.push(
+    //       context, MaterialPageRoute(builder: (context) => const IntroScreen()));
+    //
+  }
 }
