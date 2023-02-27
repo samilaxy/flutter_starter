@@ -41,13 +41,31 @@ class _SignupScreenState extends State<SignupScreen> {
                       SizedBox(
                         height: 30,
                       ),
-                      customButton(context, "Sign Up", signup)
+                      customButton(context, "Sign Up", signup),
+                      signUpOption()
                     ]))),
           )),
     );
   }
 
+  Row signUpOption() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text("Already have an account?",
+            style: TextStyle(color: Colors.white70)),
+        GestureDetector(
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => SignupScreen()));
+          },
+          child: const Text("Login",
+              style:
+                  TextStyle(color: Colors.white, fontWeight: FontWeight.bold)),
+        )
+      ],
+    );
+  }
+
   signup(context, tr) {}
 }
-
-
