@@ -16,16 +16,16 @@ class _LoginScreenState extends State<LoginScreen> {
       body: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
-            hexStringToColor("CB2B93"),
-            hexStringToColor("9546C4"),
-            hexStringToColor("5E61F4"),
+            hexStringToColor("F5F5DC"),
+            hexStringToColor("808080"),
+            hexStringToColor("21201E"),
           ], begin: Alignment.topCenter, end: Alignment.bottomCenter)),
           child: SingleChildScrollView(
               child: Padding(
                   padding: EdgeInsets.fromLTRB(
                       20, MediaQuery.of(context).size.height * 0.2, 20, 0),
                   child: Column(children: <Widget>[
-                    logoWidget("assets/cloud.jpeg'")
+                  //  logoWidget("assets/cloud.jpeg")
                   ])))),
     );
   }

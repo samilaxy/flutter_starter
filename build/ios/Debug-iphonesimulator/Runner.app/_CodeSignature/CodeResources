@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		p1XdrOK6hM3kNR2m/EIVQFe8Kf4=
+		h+NaWc2SmYfWoGcj75eKzn+LEEE=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		J7m2xfikf+q56A1MQt3dwdEBtLE=
+		/x2EuNZYe2h59qmWYCXi9w9aelA=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		7g75jihkeo5RZCLtqDoCOyEqXNc=
+		3zVOL+do6RDeigdfZi9J4K+haO8=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -144,9 +144,21 @@
 		<data>
 		DR+GU0i2W9h2th4opijczFZYttE=
 		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/fitness-logo.png</key>
+		<data>
+		qWlXNjy2Ls/YHBbi51TQF2Qt2Aw=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/fitness.png</key>
+		<data>
+		mW2/YejJAAoaC24kTvE6Dcyw1Vg=
+		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/iconweather.png</key>
 		<data>
 		2KoUTkFRUILd92ojsNaVgq4dmnQ=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/logo.png</key>
+		<data>
+		jCT5uO7dlwVkZ838lQNMCkN73/M=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/macho.jpg</key>
 		<data>
@@ -174,7 +186,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		BGt0ctGEj0fDmd89ySdC/wfBHmc=
+		8ACqgwJUzR84dTvKrHpZ+mDb0Xg=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -393,7 +405,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			C++iJCErvdpFcpnoN6CU2vCzjqxXOnGo9lFLbX0jyqs=
+			8TLrG+3D9+lmHW4nhJhM2ZJwDz42XHR+rw1l0XwRFf4=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -407,14 +419,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			qKWUMdHE/xVSKpJgNus+h6MXhm7EqB0/feKdd6bPHaE=
+			5cXVq31zSHK+T0FBh2icGyBikNFX3UfDqFsSpSRQiIc=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			jx7+jR+7AXLlKa0PHGL12nt1+5B9xdTFyQSQ8qdwwpw=
+			yiNGnXadeCwTL5kzgHS+iCvdTXg8nbVnsCaWcSdxQQk=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -564,11 +576,32 @@
 			0WB+EAXBLzEmpSqqxIJbFYZVtnYd5E6yBb7E0LQ8zlQ=
 			</data>
 		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/fitness-logo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			sjgcofJvXwMtKYFm43hsqHqy6g2y1sgnp59DA+0buRA=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/fitness.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			A196gc300SAtNfwmE8odGYwHTaDUVKsBJbd5KvDUaJA=
+			</data>
+		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/iconweather.png</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			PUFVNr7Mr2XSIOXhYwoG1mxQhlrtM9haKjwxLhA7RRU=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/logo.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			4VVmkv24gHxXUCiP0Br0r2Waf/Pl9yn492UIvqOCZ/s=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/macho.jpg</key>
@@ -617,7 +650,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j+wexqrU9cz2uVsYr1PrFyL+3/L8PfInujvfH1zioRI=
+			uOCOIIP0u6RYPU5t8U1Of4CIf7cyeYXkJAux77ZOhvE=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
