@@ -28,6 +28,6 @@ class MyMancho extends StatelessWidget {
           '/weather': (context) => const WeatherScreen(),
           '/bmi': (context) => const BmiScreen(),
         },
-        initialRoute: '/signup');
+        initialRoute: '/');
   }
 }
