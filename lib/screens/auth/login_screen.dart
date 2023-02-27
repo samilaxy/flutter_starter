@@ -30,7 +30,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Column(children: <Widget>[
                       logoWidget("assets/logo.png"),
                       SizedBox(
-                        height: 30,
+                        height: 50,
                       ),
                       customTextField("Enter email", Icons.verified_user_sharp,
                           false, emailTxt),
@@ -57,7 +57,7 @@ class _LoginScreenState extends State<LoginScreen> {
             style: TextStyle(color: Colors.white70)),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context,"/signup");
+            Navigator.pushNamed(context, "/signup");
           },
           child: const Text(" Sign Up",
               style:
