@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
+import 'package:flutter_starter/screens/auth/login_screen.dart';
+import 'package:flutter_starter/utils/color_utils.dart';
+import '../../shared/custom_widget.dart';
 
 Image logoWidget(String imageName) {
   return Image.asset(

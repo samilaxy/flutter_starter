@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/screens/auth/login_screen.dart';
 import 'package:flutter_starter/utils/color_utils.dart';
 import '../../shared/custom_widget.dart';
 
@@ -15,6 +16,15 @@ class _SignupScreenState extends State<SignupScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        title: Text(
+          "Sign Up",
+          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+        ),
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
       body: Container(
           decoration: BoxDecoration(
               gradient: LinearGradient(colors: [
@@ -31,6 +41,11 @@ class _SignupScreenState extends State<SignupScreen> {
                       SizedBox(
                         height: 30,
                       ),
+                      customTextField("Enter Fullname",
+                          Icons.supervised_user_circle, false, emailTxt),
+                      SizedBox(
+                        height: 30,
+                      ),
                       customTextField("Enter email", Icons.verified_user_sharp,
                           false, emailTxt),
                       SizedBox(
@@ -41,8 +56,16 @@ class _SignupScreenState extends State<SignupScreen> {
                       SizedBox(
                         height: 30,
                       ),
+                      customTextField(
+                          "Enter password", Icons.lock, true, passwordTxt),
+                      SizedBox(
+                        height: 30,
+                      ),
                       customButton(context, "Sign Up", signup),
-                      signUpOption()
+                      signUpOption(),
+                      SizedBox(
+                        height: 30,
+                      )
                     ]))),
           )),
     );
@@ -57,7 +80,7 @@ class _SignupScreenState extends State<SignupScreen> {
         GestureDetector(
           onTap: () {
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => const SignupScreen()));
+                MaterialPageRoute(builder: (context) => const LoginScreen()));
           },
           child: const Text(" Login",
               style:
