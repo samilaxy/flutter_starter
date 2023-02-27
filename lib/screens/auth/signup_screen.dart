@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/screens/auth/login_screen.dart';
-import 'package:flutter_starter/screens/intro_screen.dart';
+import 'package:flutter_starter/controllers/signup_controller.dart';
 import 'package:flutter_starter/utils/color_utils.dart';
+import 'package:get/get.dart';
 import '../../shared/custom_widget.dart';
 
 class SignupScreen extends StatefulWidget {
@@ -12,6 +12,8 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
+
+  final controller = Get.put(SignupController()); 
   final TextEditingController emailTxt = TextEditingController();
   final TextEditingController passwordTxt = TextEditingController();
   @override
@@ -19,10 +21,6 @@ class _SignupScreenState extends State<SignupScreen> {
     return Scaffold(
       extendBodyBehindAppBar: true,
       appBar: AppBar(
-        title: Text(
-          "Sign Up",
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
-        ),
         elevation: 0,
         backgroundColor: Colors.transparent,
       ),
@@ -39,6 +37,14 @@ class _SignupScreenState extends State<SignupScreen> {
                     padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
                     child: Column(children: <Widget>[
                       logoWidget("assets/logo.png"),
+                      SizedBox(
+                        height: 30,
+                      ),
+                      Text("Sign Up",
+                          style: TextStyle(
+                              fontSize: 24,
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold)),
                       SizedBox(
                         height: 30,
                       ),
@@ -80,7 +86,7 @@ class _SignupScreenState extends State<SignupScreen> {
             style: TextStyle(color: Colors.white70)),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context,"/");
+            Navigator.pushNamed(context, "/");
           },
           child: const Text(" Login",
               style:
@@ -92,8 +98,6 @@ class _SignupScreenState extends State<SignupScreen> {
 
   signup() {
     print("object");
-    //   Navigator.push(
-    //       context, MaterialPageRoute(builder: (context) => const IntroScreen()));
-    //
+    // Navigator.pushNamed(context,"/intro");
   }
 }

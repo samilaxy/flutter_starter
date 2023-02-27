@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/screens/auth/signup_screen.dart';
 import 'package:flutter_starter/utils/color_utils.dart';
 import '../../shared/custom_widget.dart';
 
@@ -43,7 +42,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 30,
                       ),
                       customButton(context, "Log In", login),
-                      loginOption()
+                      loginOption(),
+                      SizedBox(
+                        height: 30,
+                      )
                     ]))),
           )),
     );
@@ -71,3 +73,4 @@ class _LoginScreenState extends State<LoginScreen> {
     // Navigator.pushNamed(context,"/signup");
   }
 }
+
