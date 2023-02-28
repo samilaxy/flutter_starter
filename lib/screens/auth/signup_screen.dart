@@ -14,7 +14,7 @@ class SignupScreen extends StatefulWidget {
 class _SignupScreenState extends State<SignupScreen> {
   final controller = Get.put(SignupController());
   final _formKey = GlobalKey<FormState>();
-  
+
   final TextEditingController emailTxt = TextEditingController();
   final TextEditingController passwordTxt = TextEditingController();
   @override
@@ -35,43 +35,47 @@ class _SignupScreenState extends State<SignupScreen> {
           child: Center(
             child: SingleChildScrollView(
                 child: Padding(
-                    padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                     child: Column(children: <Widget>[
                       logoWidget("assets/logo.png"),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      Text("Sign Up",
+                      const Text("Sign Up",
                           style: TextStyle(
                               fontSize: 24,
                               color: Colors.white,
                               fontWeight: FontWeight.bold)),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      customTextField("Enter Fullname",
+                      Form(
+                        key: _formKey,
+                        child:  Column(children: <Widget>[
+                        customTextField("Enter Fullname",
                           Icons.supervised_user_circle, false, emailTxt),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       customTextField("Enter email", Icons.verified_user_sharp,
                           false, emailTxt),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       customTextField("Enter password", Icons.lock, true,
                           controller.password),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       customTextField(
                           "Enter password", Icons.lock, true, passwordTxt),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
-                      customButton(context, "Sign Up", signup),
+                       customButton(context, "Sign Up", signup)
+                      ])),
                       signUpOption(),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       )
                     ]))),
