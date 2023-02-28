@@ -50,30 +50,30 @@ class _SignupScreenState extends State<SignupScreen> {
                         height: 30,
                       ),
                       Form(
-                        key: _formKey,
-                        child:  Column(children: <Widget>[
-                        customTextField("Enter Fullname",
-                          Icons.supervised_user_circle, false, emailTxt),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      customTextField("Enter email", Icons.verified_user_sharp,
-                          false, emailTxt),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      customTextField("Enter password", Icons.lock, true,
-                          controller.password),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                      customTextField(
-                          "Enter password", Icons.lock, true, passwordTxt),
-                      const SizedBox(
-                        height: 30,
-                      ),
-                       customButton(context, "Sign Up", signup)
-                      ])),
+                          key: _formKey,
+                          child: Column(children: <Widget>[
+                            customTextField("Enter Fullname",
+                                Icons.supervised_user_circle, false, emailTxt),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            customTextField("Enter email",
+                                Icons.verified_user_sharp, false, emailTxt),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            customTextField("Enter password", Icons.lock, true,
+                                controller.password),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            customTextField("Enter password", Icons.lock, true,
+                                passwordTxt),
+                            const SizedBox(
+                              height: 30,
+                            ),
+                            customButton(context, "Sign Up", signup)
+                          ])),
                       signUpOption(),
                       const SizedBox(
                         height: 30,
@@ -102,7 +102,9 @@ class _SignupScreenState extends State<SignupScreen> {
   }
 
   signup() {
-    print("object");
+    if (_formKey.currentState!.validate()) {
+      SignupController.instance.registerUser(controller.email.text.trim as String, controller.password.text.trim());
+    }
     // Navigator.pushNamed(context,"/intro");
   }
 }
