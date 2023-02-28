@@ -8,7 +8,12 @@ class SignUpWithEmailAndPasswordFailure {
   factory SignUpWithEmailAndPasswordFailure.code(String code){
 
     switch(code){
-      case '' : return const SignUpWithEmailAndPasswordFailure('');
+      case 'weak-password' :
+       return const SignUpWithEmailAndPasswordFailure('Please enter a stronger password.');
+      case 'invalid-email' :
+       return const SignUpWithEmailAndPasswordFailure('Email is not valid or badly formatted.');
+      case 'email-aleady-in-use' :
+       return const SignUpWithEmailAndPasswordFailure('Email is not valid or badly formatted.');
       default: return const SignUpWithEmailAndPasswordFailure();
     }
   }
