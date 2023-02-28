@@ -13,7 +13,11 @@ class SignUpWithEmailAndPasswordFailure {
       case 'invalid-email' :
        return const SignUpWithEmailAndPasswordFailure('Email is not valid or badly formatted.');
       case 'email-aleady-in-use' :
-       return const SignUpWithEmailAndPasswordFailure('Email is not valid or badly formatted.');
+       return const SignUpWithEmailAndPasswordFailure('An account already exits for that email.');
+      case 'operation-not-allowed' :
+       return const SignUpWithEmailAndPasswordFailure('Opreation is not allowed. Please contact support.');
+      case 'email-aleady-in-use' :
+       return const SignUpWithEmailAndPasswordFailure('An account already exits for that email.');
       default: return const SignUpWithEmailAndPasswordFailure();
     }
   }
