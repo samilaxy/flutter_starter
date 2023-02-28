@@ -15,10 +15,29 @@ class AuthRepository extends GetxController {
     firebaseUser.bindStream(_auth.userChanges());
     ever(firebaseUser, _setInitilaState);
   }
-}
 
-_setInitilaState(User? user) {
-  user == null
-      ? Get.offAll(() => const LoginScreen())
-      : Get.offAll(() => const IntroScreen());
+  _setInitilaState(User? user) {
+    user == null
+        ? Get.offAll(() => const LoginScreen())
+        : Get.offAll(() => const IntroScreen());
+  }
+
+  Future<void> createUserWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      await _auth.createUserWithEmailAndPassword(
+          email: email, password: password);
+      // ignore: empty_catches
+    } on FirebaseAuthException catch (e) {
+    } catch (_) {}
+  }
+  Future<void> logineUserWithEmailAndPassword(
+      String email, String password) async {
+    try {
+      await _auth.createUserWithEmailAndPassword(
+          email: email, password: password);
+      // ignore: empty_catches
+    } on FirebaseAuthException catch (e) {
+    } catch (_) {}
+  }
 }
