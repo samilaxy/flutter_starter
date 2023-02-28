@@ -12,8 +12,9 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
-
-  final controller = Get.put(SignupController()); 
+  final controller = Get.put(SignupController());
+  final _formKey = GlobalKey<FormState>();
+  
   final TextEditingController emailTxt = TextEditingController();
   final TextEditingController passwordTxt = TextEditingController();
   @override
@@ -58,8 +59,8 @@ class _SignupScreenState extends State<SignupScreen> {
                       SizedBox(
                         height: 30,
                       ),
-                      customTextField(
-                          "Enter password", Icons.lock, true, passwordTxt),
+                      customTextField("Enter password", Icons.lock, true,
+                          controller.password),
                       SizedBox(
                         height: 30,
                       ),
