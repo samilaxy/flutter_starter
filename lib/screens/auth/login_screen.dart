@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/screens/auth/signup_screen.dart';
 import 'package:flutter_starter/utils/color_utils.dart';
 import '../../shared/custom_widget.dart';
 
@@ -30,7 +29,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     child: Column(children: <Widget>[
                       logoWidget("assets/logo.png"),
                       SizedBox(
-                        height: 30,
+                        height: 50,
                       ),
                       customTextField("Enter email", Icons.verified_user_sharp,
                           false, emailTxt),
@@ -43,7 +42,10 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 30,
                       ),
                       customButton(context, "Log In", login),
-                      loginOption()
+                      loginOption(),
+                      SizedBox(
+                        height: 30,
+                      )
                     ]))),
           )),
     );
@@ -57,7 +59,7 @@ class _LoginScreenState extends State<LoginScreen> {
             style: TextStyle(color: Colors.white70)),
         GestureDetector(
           onTap: () {
-            Navigator.pushNamed(context,"/signup");
+            Navigator.pushNamed(context, "/signup");
           },
           child: const Text(" Sign Up",
               style:
@@ -71,3 +73,4 @@ class _LoginScreenState extends State<LoginScreen> {
     // Navigator.pushNamed(context,"/signup");
   }
 }
+

@@ -4,9 +4,13 @@ import 'package:flutter_starter/screens/weather_screen.dart';
 import 'screens/intro_screen.dart';
 import 'screens/auth/login_screen.dart';
 import 'screens/auth/signup_screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 void main() {
   runApp(const MyMancho());
+  WidgetsFlutterBinding.ensureInitialized();
+  Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
 }
 
 class MyMancho extends StatelessWidget {
