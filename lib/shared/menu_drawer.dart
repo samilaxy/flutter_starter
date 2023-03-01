@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/screens/auth/login_screen.dart';
 import 'package:flutter_starter/screens/weather_screen.dart';
+import '../repository/auth_repository.dart';
 import '../screens/bmi_screen.dart';
 import '../screens/intro_screen.dart';
 import '../screens/todo_screen.dart';
@@ -23,7 +25,8 @@ class MenuDrawer extends StatelessWidget {
       'BMI Calculator',
       'Weather',
       'Training',
-      'Workouts Todo'
+      'Workouts Todo',
+      'Log Out'
     ];
     List<Widget> menuItems = [];
     menuItems.add(const DrawerHeader(
@@ -48,6 +51,10 @@ class MenuDrawer extends StatelessWidget {
               break;
             case 'Workouts Todo':
               screen = const TodoScreen();
+              break;
+            case 'Log Out':
+             // screen = const LoginScreen();
+              AuthRepository.instance.logout();
               break;
           }
           Navigator.of(context).pop();

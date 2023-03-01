@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_starter/controllers/login_controller.dart';
 import 'package:flutter_starter/utils/color_utils.dart';
+import 'package:get/get.dart';
 import '../../shared/custom_widget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -10,8 +12,12 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  final controller = Get.put(LoginController());
+  final _formKey = GlobalKey<FormState>();
   final TextEditingController emailTxt = TextEditingController();
   final TextEditingController passwordTxt = TextEditingController();
+  // final TextEditingController emailTxt = TextEditingController();
+  // final TextEditingController passwordTxt = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -25,25 +31,25 @@ class _LoginScreenState extends State<LoginScreen> {
           child: Center(
             child: SingleChildScrollView(
                 child: Padding(
-                    padding: EdgeInsets.fromLTRB(20, 0, 20, 0),
+                    padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                     child: Column(children: <Widget>[
                       logoWidget("assets/logo.png"),
-                      SizedBox(
+                      const SizedBox(
                         height: 50,
                       ),
                       customTextField("Enter email", Icons.verified_user_sharp,
-                          false, emailTxt),
-                      SizedBox(
+                          false, controller.email),
+                      const SizedBox(
                         height: 30,
                       ),
-                      customTextField(
-                          "Enter password", Icons.lock, true, passwordTxt),
-                      SizedBox(
+                      customTextField("Enter password", Icons.lock, true,
+                          controller.password),
+                      const SizedBox(
                         height: 30,
                       ),
                       customButton(context, "Log In", login),
                       loginOption(),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       )
                     ]))),
@@ -71,6 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
   login() {
     // Navigator.pushNamed(context,"/signup");
+    LoginController.instance
+        .loginUser(emailTxt.text.trim(), passwordTxt.text.trim());
   }
 }
-
