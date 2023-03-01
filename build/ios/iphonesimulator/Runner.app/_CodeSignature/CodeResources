@@ -46,7 +46,7 @@
 		</data>
 		<key>Frameworks/App.framework/App</key>
 		<data>
-		K80mVNWvZQXwfcSaLqxqYexL8tY=
+		Hd7Su8GtRCWuhXUZTsh2Zk9KtX8=
 		</data>
 		<key>Frameworks/App.framework/Info.plist</key>
 		<data>
@@ -54,11 +54,11 @@
 		</data>
 		<key>Frameworks/App.framework/_CodeSignature/CodeResources</key>
 		<data>
-		1nicTbUcaEmXwmKF/CaSEQDRYvA=
+		3ZrhqUlVDR5hj8J62RCUULVb8GA=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<data>
-		3zVOL+do6RDeigdfZi9J4K+haO8=
+		wfTysfuPyOm3yru4dzLgBbeZf+E=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
 		<data>
@@ -132,9 +132,17 @@
 		<data>
 		LMA+8KshM2femqMsUH7w2kSpFBM=
 		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/Logoimages.png</key>
+		<data>
+		uaTyBeegQQe6LxRJCbG08uVzJOg=
+		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/backCloud.jpg</key>
 		<data>
 		upIfCYhfX2/yv3Pr+zcXDim3I2Y=
+		</data>
+		<key>Frameworks/App.framework/flutter_assets/assets/boby.png</key>
+		<data>
+		cEI5ThxMc96qQplmXlnWcD6pvEE=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/cloud.jpeg</key>
 		<data>
@@ -143,10 +151,6 @@
 		<key>Frameworks/App.framework/flutter_assets/assets/cloud1.avif</key>
 		<data>
 		DR+GU0i2W9h2th4opijczFZYttE=
-		</data>
-		<key>Frameworks/App.framework/flutter_assets/assets/fitness-logo.png</key>
-		<data>
-		qWlXNjy2Ls/YHBbi51TQF2Qt2Aw=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/assets/fitness.png</key>
 		<data>
@@ -186,7 +190,7 @@
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/kernel_blob.bin</key>
 		<data>
-		e0b9efrceuENhE0l2TsTvoonRQg=
+		+hxEFMjhIM5bIDdOe7zAxPNtjRk=
 		</data>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -481,7 +485,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			smUGNbabVPu0Hv3Y+CbMG6D5OoQ6XjioCGMC9x12UCU=
+			Bwl/dX4R/yugFkuyQnPiDY9E31eHbmTauwil4CK4/6w=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/Info.plist</key>
@@ -495,14 +499,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			j3xvap9UdxWtJZgkEzE/G1i2uBwuafSI159a4Xgk9rc=
+			RwfqfqpuMJ74Ubzdd5Si/QE92V0bkZwTSS/X0y8nKXE=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/AssetManifest.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			yiNGnXadeCwTL5kzgHS+iCvdTXg8nbVnsCaWcSdxQQk=
+			4dj+i17GwM3KVwGa1y84YpMO1tyNDZkKFQlnsh7tnkg=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/FontManifest.json</key>
@@ -631,11 +635,25 @@
 			GplH0+ig1XYXn4Jt3zXRuhKc7AbYhg249i7mgbgrwHU=
 			</data>
 		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/Logoimages.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			+2tyQfDIFG3JJi4/QfzOCWo3lc2lNart0maQtFxelrA=
+			</data>
+		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/backCloud.jpg</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			EqRg2teS2XKe81iP1rwvZzI0Pdi2zcEk70f/yKfHHxE=
+			</data>
+		</dict>
+		<key>Frameworks/App.framework/flutter_assets/assets/boby.png</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			iYytu+u1HR5OTWNWodY2sehlHclv3IevtQWD9r9vum0=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/cloud.jpeg</key>
@@ -650,13 +668,6 @@
 			<key>hash2</key>
 			<data>
 			0WB+EAXBLzEmpSqqxIJbFYZVtnYd5E6yBb7E0LQ8zlQ=
-			</data>
-		</dict>
-		<key>Frameworks/App.framework/flutter_assets/assets/fitness-logo.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			sjgcofJvXwMtKYFm43hsqHqy6g2y1sgnp59DA+0buRA=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/assets/fitness.png</key>
@@ -726,7 +737,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			zyt4ERZmG/9DMDtIdE1gco7l4ygpDZ/AoPPi9TtmNjU=
+			psWt1UMzHWjJ8KUjZT0UYX5pKx21tBCMCyJOeKUqfV8=
 			</data>
 		</dict>
 		<key>Frameworks/App.framework/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

@@ -12,7 +12,7 @@ class SignupScreen extends StatefulWidget {
 }
 
 class _SignupScreenState extends State<SignupScreen> {
-  final controller = Get.put(SignupController());
+  final signUpcontroller = Get.put(SignupController());
   final _formKey = GlobalKey<FormState>();
 
   final TextEditingController emailTxt = TextEditingController();
@@ -50,9 +50,9 @@ class _SignupScreenState extends State<SignupScreen> {
                         height: 30,
                       ),
                       Form(
-                          key: _formKey,
-                          child: Column(children: <Widget>[
-                            customTextField("Enter Fullname",
+                         key: _formKey, child:
+                           Column(children: <Widget>[
+                            customTextField("Enter Full name",
                                 Icons.supervised_user_circle, false, emailTxt),
                             const SizedBox(
                               height: 30,
@@ -63,7 +63,7 @@ class _SignupScreenState extends State<SignupScreen> {
                               height: 30,
                             ),
                             customTextField("Enter password", Icons.lock, true,
-                                controller.password),
+                                passwordTxt),
                             const SizedBox(
                               height: 30,
                             ),
@@ -73,7 +73,9 @@ class _SignupScreenState extends State<SignupScreen> {
                               height: 30,
                             ),
                             customButton(context, "Sign Up", signup)
-                          ])),
+                          ]),
+                          ),
+
                       signUpOption(),
                       const SizedBox(
                         height: 30,
@@ -102,9 +104,11 @@ class _SignupScreenState extends State<SignupScreen> {
   }
 
   signup() {
-    if (_formKey.currentState!.validate()) {
-      SignupController.instance.registerUser(controller.email.text.trim as String, controller.password.text.trim());
-    }
+      if (_formKey.currentState!.validate()) {
+    print("hereeeeee");
+   signUpcontroller.registerUser(emailTxt.text.trim(), passwordTxt.text.trim());
+     }
     // Navigator.pushNamed(context,"/intro");
+
   }
 }

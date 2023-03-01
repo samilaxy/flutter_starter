@@ -1,14 +1,13 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_starter/screens/auth/login_screen.dart';
-import 'package:flutter_starter/utils/color_utils.dart';
-import '../../shared/custom_widget.dart';
+import 'dart:ffi';
 
-Image logoWidget(String imageName) {
+import 'package:flutter/material.dart';
+
+Image logoWidget(String imageName, { size = 100}) {
   return Image.asset(
     imageName,
     fit: BoxFit.fitWidth,
-    width: 80,
-    height: 80,
+    width: size,
+    height: size,
   );
 }
 
