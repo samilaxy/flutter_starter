@@ -108,10 +108,6 @@
 		<data>
 		DR+GU0i2W9h2th4opijczFZYttE=
 		</data>
-		<key>flutter_assets/assets/fitness-logo.png</key>
-		<data>
-		qWlXNjy2Ls/YHBbi51TQF2Qt2Aw=
-		</data>
 		<key>flutter_assets/assets/fitness.png</key>
 		<data>
 		mW2/YejJAAoaC24kTvE6Dcyw1Vg=
@@ -150,7 +146,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		+hxEFMjhIM5bIDdOe7zAxPNtjRk=
+		Dy2YzmlkzG7sqAZ3E0s42xZkJCg=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -347,13 +343,6 @@
 			0WB+EAXBLzEmpSqqxIJbFYZVtnYd5E6yBb7E0LQ8zlQ=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/fitness-logo.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			sjgcofJvXwMtKYFm43hsqHqy6g2y1sgnp59DA+0buRA=
-			</data>
-		</dict>
 		<key>flutter_assets/assets/fitness.png</key>
 		<dict>
 			<key>hash2</key>
@@ -421,7 +410,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			psWt1UMzHWjJ8KUjZT0UYX5pKx21tBCMCyJOeKUqfV8=
+			i71q4x9Oa6hWGyQQGMo1NSkEV9qfcyC/wqEQMp4LNls=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
