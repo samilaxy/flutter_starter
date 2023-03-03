@@ -9,6 +9,7 @@ class SignupController extends GetxController {
   final username = TextEditingController();
   final email = TextEditingController();
   final password = TextEditingController();
+   final comfirmPassword = TextEditingController();
 
   //register user
   void registerUser(String email, String password) {
