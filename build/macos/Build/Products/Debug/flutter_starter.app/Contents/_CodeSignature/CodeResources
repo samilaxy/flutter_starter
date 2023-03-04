@@ -16,6 +16,10 @@
 		<data>
 		Dq7QJHPQKG+fXzW0AIL9vHeLgWs=
 		</data>
+		<key>Resources/GoogleService-Info.plist</key>
+		<data>
+		goMYZO3hcBvmjjZPV7x8X7lwEpY=
+		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
@@ -23,10 +27,46 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			NztR4yYaP+sbRDe9yiRlo3qu1/E=
+			dPkczkqoIQUuKECNm9/llv1N3Y4=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"373b51e3261a3feb1b4437bdca2465a37aaed7f1"</string>
+			<string>cdhash H"74f91cce4aa821052e28408d9bdfe596fd4ddd8e"</string>
+		</dict>
+		<key>Frameworks/FBLPromises.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			19chQcrSiTAyLQy2JQJbjuE5Smc=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"36f0c39212b4d74a4076c96faab07f94f417559b" or cdhash H"d7d72141cad28930322d0cb625025b8ee1394a67"</string>
+		</dict>
+		<key>Frameworks/FirebaseAuth.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			3oGkR15GUHSdsfMX+XGs56t+VCY=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"de81a4475e4650749db1f317f971ace7ab7e5426"</string>
+		</dict>
+		<key>Frameworks/FirebaseCore.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			1EFWbfgMuWT1iGaBZHE4bxmoacQ=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"d441566df80cb964f58866816471386f19a869c4"</string>
+		</dict>
+		<key>Frameworks/FirebaseCoreInternal.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Ov25V/K1VOe74F1rIBvqVv2CpA0=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"3afdb957f2b554e7bbe05d6b201bea56fd82a40d"</string>
 		</dict>
 		<key>Frameworks/FlutterMacOS.framework</key>
 		<dict>
@@ -37,14 +77,32 @@
 			<key>requirement</key>
 			<string>cdhash H"7edbb1a8cdc7891fb3064c58f49273188bf0c763"</string>
 		</dict>
+		<key>Frameworks/GTMSessionFetcher.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			N7ZG2pFc4uFTyndAR6t2rwMNrw0=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"37b646da915ce2e153ca774047ab76af030daf0d"</string>
+		</dict>
+		<key>Frameworks/GoogleUtilities.framework</key>
+		<dict>
+			<key>cdhash</key>
+			<data>
+			Nayc9MJI8K8sXQWJB3xY4sEkrI0=
+			</data>
+			<key>requirement</key>
+			<string>cdhash H"35ac9cf4c248f0af2c5d0589077c58e2c124ac8d"</string>
+		</dict>
 		<key>Frameworks/flutter_platform_alert.framework</key>
 		<dict>
 			<key>cdhash</key>
 			<data>
-			r+x5dajd5XkuV+G9EaTbNXpjGNM=
+			eowdiQ1Pr0n/H/ALLv96zKDfW9U=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"afec7975a8dde5792e57e1bd11a4db357a6318d3"</string>
+			<string>cdhash H"7a8c1d890d4faf49ff1ff00b2eff7acca0df5bd5"</string>
 		</dict>
 		<key>Frameworks/libswiftAppKit.dylib</key>
 		<dict>
@@ -203,10 +261,10 @@
 		<dict>
 			<key>cdhash</key>
 			<data>
-			ckcaqv67p5OY8cMHVqIWDkqKFug=
+			mGrn1OdvuN4KpbJPzGA/vYIn/EY=
 			</data>
 			<key>requirement</key>
-			<string>cdhash H"72471aaafebba79398f1c30756a2160e4a8a16e8"</string>
+			<string>cdhash H"986ae7d4e76fb8de0aa5b24fcc603fbd8227fc46"</string>
 		</dict>
 		<key>Resources/AppIcon.icns</key>
 		<dict>
@@ -227,6 +285,13 @@
 			<key>hash2</key>
 			<data>
 			Zz9gZc4DtgOH67rhVVNiBqMk5LQDpipUC0lEC4ZUtyg=
+			</data>
+		</dict>
+		<key>Resources/GoogleService-Info.plist</key>
+		<dict>
+			<key>hash2</key>
+			<data>
+			xUb7Df24A9PcYm6ce2eRBOIUrNLcTtHN40pBltfzBkk=
 			</data>
 		</dict>
 	</dict>

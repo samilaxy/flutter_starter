@@ -1,0 +1,66 @@
+Target dependency graph (15 targets)
+PromisesObjC in Pods, no dependencies
+GoogleUtilities in Pods, depends on:
+PromisesObjC in Pods (explicit)
+FirebaseCoreInternal in Pods, depends on:
+GoogleUtilities in Pods (explicit)
+FirebaseCore in Pods, depends on:
+FirebaseCoreInternal in Pods (explicit)
+GoogleUtilities in Pods (explicit)
+GTMSessionFetcher in Pods, no dependencies
+FirebaseAuth in Pods, depends on:
+FirebaseCore in Pods (explicit)
+GTMSessionFetcher in Pods (explicit)
+GoogleUtilities in Pods (explicit)
+Firebase in Pods, depends on:
+FirebaseAuth in Pods (explicit)
+FirebaseCore in Pods (explicit)
+FlutterMacOS in Pods, no dependencies
+firebase_core in Pods, depends on:
+Firebase in Pods (explicit)
+FlutterMacOS in Pods (explicit)
+firebase_auth in Pods, depends on:
+Firebase in Pods (explicit)
+FlutterMacOS in Pods (explicit)
+firebase_core in Pods (explicit)
+flutter_platform_alert in Pods, depends on:
+FlutterMacOS in Pods (explicit)
+location in Pods, depends on:
+FlutterMacOS in Pods (explicit)
+Flutter Assemble in Runner, depends on:
+PromisesObjC in Pods (implicit dependency via options '-framework FBLPromises' in build setting 'OTHER_LDFLAGS')
+FirebaseAuth in Pods (implicit dependency via options '-framework FirebaseAuth' in build setting 'OTHER_LDFLAGS')
+FirebaseCore in Pods (implicit dependency via options '-framework FirebaseCore' in build setting 'OTHER_LDFLAGS')
+FirebaseCoreInternal in Pods (implicit dependency via options '-framework FirebaseCoreInternal' in build setting 'OTHER_LDFLAGS')
+GTMSessionFetcher in Pods (implicit dependency via options '-framework GTMSessionFetcher' in build setting 'OTHER_LDFLAGS')
+GoogleUtilities in Pods (implicit dependency via options '-framework GoogleUtilities' in build setting 'OTHER_LDFLAGS')
+firebase_auth in Pods (implicit dependency via options '-framework firebase_auth' in build setting 'OTHER_LDFLAGS')
+firebase_core in Pods (implicit dependency via options '-framework firebase_core' in build setting 'OTHER_LDFLAGS')
+flutter_platform_alert in Pods (implicit dependency via options '-framework flutter_platform_alert' in build setting 'OTHER_LDFLAGS')
+location in Pods (implicit dependency via options '-framework location' in build setting 'OTHER_LDFLAGS')
+Pods-Runner in Pods, depends on:
+Firebase in Pods (explicit)
+FirebaseAuth in Pods (explicit)
+FirebaseCore in Pods (explicit)
+FirebaseCoreInternal in Pods (explicit)
+FlutterMacOS in Pods (explicit)
+GTMSessionFetcher in Pods (explicit)
+GoogleUtilities in Pods (explicit)
+PromisesObjC in Pods (explicit)
+firebase_auth in Pods (explicit)
+firebase_core in Pods (explicit)
+flutter_platform_alert in Pods (explicit)
+location in Pods (explicit)
+Runner in Runner, depends on:
+Flutter Assemble in Runner (explicit)
+Pods-Runner in Pods (implicit dependency via file 'Pods_Runner.framework' in build phase 'Link Binary')
+PromisesObjC in Pods (implicit dependency via options '-framework FBLPromises' in build setting 'OTHER_LDFLAGS')
+FirebaseAuth in Pods (implicit dependency via options '-framework FirebaseAuth' in build setting 'OTHER_LDFLAGS')
+FirebaseCore in Pods (implicit dependency via options '-framework FirebaseCore' in build setting 'OTHER_LDFLAGS')
+FirebaseCoreInternal in Pods (implicit dependency via options '-framework FirebaseCoreInternal' in build setting 'OTHER_LDFLAGS')
+GTMSessionFetcher in Pods (implicit dependency via options '-framework GTMSessionFetcher' in build setting 'OTHER_LDFLAGS')
+GoogleUtilities in Pods (implicit dependency via options '-framework GoogleUtilities' in build setting 'OTHER_LDFLAGS')
+firebase_auth in Pods (implicit dependency via options '-framework firebase_auth' in build setting 'OTHER_LDFLAGS')
+firebase_core in Pods (implicit dependency via options '-framework firebase_core' in build setting 'OTHER_LDFLAGS')
+flutter_platform_alert in Pods (implicit dependency via options '-framework flutter_platform_alert' in build setting 'OTHER_LDFLAGS')
+location in Pods (implicit dependency via options '-framework location' in build setting 'OTHER_LDFLAGS')

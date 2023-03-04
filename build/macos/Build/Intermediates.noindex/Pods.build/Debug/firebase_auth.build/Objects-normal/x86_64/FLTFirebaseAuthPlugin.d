@@ -1,0 +1,74 @@
+dependencies: \
+  /Users/noyesamuel/.pub-cache/hosted/pub.dev/firebase_auth-4.2.9/macos/Classes/FLTFirebaseAuthPlugin.m \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/firebase_auth.build/module.modulemap \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/Target\ Support\ Files/firebase_auth/firebase_auth-prefix.pch \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/Headers/Public/Firebase/Firebase.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseCore.build/module.modulemap \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRVersion.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIROptions.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FirebaseCore.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRLoggerLevel.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRConfiguration.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCore/FirebaseCore/Sources/Public/FirebaseCore/FIRApp.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/Target\ Support\ Files/FirebaseCore/FirebaseCore-umbrella.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FirebaseAuth.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/FirebaseAuth.build/module.modulemap \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRPhoneMultiFactorInfo.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRPhoneMultiFactorGenerator.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRPhoneMultiFactorAssertion.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRPhoneAuthProvider.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRPhoneAuthCredential.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRUserMetadata.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRUserInfo.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRUser.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRTwitterAuthProvider.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIROAuthProvider.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIROAuthCredential.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRMultiFactorResolver.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRMultiFactorSession.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRMultiFactorInfo.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRMultiFactorAssertion.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRMultiFactor.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRGoogleAuthProvider.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRGitHubAuthProvider.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRGameCenterAuthProvider.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRFederatedAuthProvider.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRFacebookAuthProvider.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIREmailAuthProvider.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthUIDelegate.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthTokenResult.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthSettings.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthDataResult.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthCredential.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthErrors.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuthAPNSTokenType.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAuth.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRAdditionalUserInfo.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseAuth/FirebaseAuth/Sources/Public/FirebaseAuth/FIRActionCodeSettings.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/Target\ Support\ Files/FirebaseAuth/FirebaseAuth-umbrella.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Intermediates.noindex/Pods.build/Debug/firebase_core.build/module.modulemap \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Modules/module.modulemap \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterViewController.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterTexture.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterPluginMacOS.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterPlatformViews.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterPluginRegistrarMacOS.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterEngine.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterDartProject.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterCodecs.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterChannels.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterBinaryMessenger.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterMacros.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterAppDelegate.h \
+  /Users/noyesamuel/Dev/flutter/bin/cache/artifacts/engine/darwin-x64/FlutterMacOS.framework/Headers/FlutterMacOS.h \
+  /Users/noyesamuel/.pub-cache/hosted/pub.dev/firebase_core-2.7.0/macos/Classes/FLTFirebasePluginRegistry.h \
+  /Users/noyesamuel/.pub-cache/hosted/pub.dev/firebase_core-2.7.0/macos/Classes/messages.g.h \
+  /Users/noyesamuel/.pub-cache/hosted/pub.dev/firebase_core-2.7.0/macos/Classes/FLTFirebasePlugin.h \
+  /Users/noyesamuel/.pub-cache/hosted/pub.dev/firebase_core-2.7.0/macos/Classes/FLTFirebaseCorePlugin.h \
+  /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/Target\ Support\ Files/firebase_core/firebase_core-umbrella.h \
+  /Users/noyesamuel/.pub-cache/hosted/pub.dev/firebase_auth-4.2.9/macos/Classes/Private/FLTAuthStateChannelStreamHandler.h \
+  /Users/noyesamuel/.pub-cache/hosted/pub.dev/firebase_auth-4.2.9/macos/Classes/Private/FLTIdTokenChannelStreamHandler.h \
+  /Users/noyesamuel/.pub-cache/hosted/pub.dev/firebase_auth-4.2.9/macos/Classes/Private/FLTPhoneNumberVerificationStreamHandler.h \
+  /Users/noyesamuel/.pub-cache/hosted/pub.dev/firebase_auth-4.2.9/macos/Classes/Public/CustomPigeonHeader.h \
+  /Users/noyesamuel/.pub-cache/hosted/pub.dev/firebase_auth-4.2.9/macos/Classes/Public/messages.g.h \
+  /Users/noyesamuel/.pub-cache/hosted/pub.dev/firebase_auth-4.2.9/macos/Classes/Public/FLTFirebaseAuthPlugin.h
