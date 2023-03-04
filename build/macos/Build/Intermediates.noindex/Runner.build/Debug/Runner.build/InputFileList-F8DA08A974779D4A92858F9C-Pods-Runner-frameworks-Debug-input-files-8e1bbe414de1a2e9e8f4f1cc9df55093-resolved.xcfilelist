@@ -1,3 +1,9 @@
 /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/Target Support Files/Pods-Runner/Pods-Runner-frameworks.sh
+/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Products/Debug/FirebaseAuth/FirebaseAuth.framework
+/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Products/Debug/FirebaseCore/FirebaseCore.framework
+/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Products/Debug/FirebaseCoreInternal/FirebaseCoreInternal.framework
+/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Products/Debug/GTMSessionFetcher/GTMSessionFetcher.framework
+/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Products/Debug/GoogleUtilities/GoogleUtilities.framework
+/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Products/Debug/PromisesObjC/FBLPromises.framework
 /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Products/Debug/flutter_platform_alert/flutter_platform_alert.framework
 /Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/build/macos/Build/Products/Debug/location/location.framework

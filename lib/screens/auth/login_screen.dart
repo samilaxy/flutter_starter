@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter/controllers/login_controller.dart';
 import 'package:flutter_starter/utils/color_utils.dart';
 import 'package:get/get.dart';
-import '../../shared/custom_button.dart';
 import '../../shared/custom_widget.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -56,10 +55,6 @@ class _LoginScreenState extends State<LoginScreen> {
       margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
                     child: ElevatedButton(
                         onPressed: login,
-                       // color: Colors.black26,
-                        child: Text('CLogin',
-                            style: const TextStyle(
-                                color: Colors.white60, fontWeight: FontWeight.bold, fontSize: 16)),
                                  style: ButtonStyle(
                               backgroundColor: MaterialStateColor.resolveWith((states) {
                                 if (states.contains(MaterialState.pressed)) {
@@ -69,7 +64,11 @@ class _LoginScreenState extends State<LoginScreen> {
                               }),
                               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                                   RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30))))
+                      borderRadius: BorderRadius.circular(30)))),
+                       // color: Colors.black26,
+                        child: const Text('Login',
+                            style: TextStyle(
+                                color: Colors.white60, fontWeight: FontWeight.bold, fontSize: 16))
                                 ),
                   ),
                       loginOption(),

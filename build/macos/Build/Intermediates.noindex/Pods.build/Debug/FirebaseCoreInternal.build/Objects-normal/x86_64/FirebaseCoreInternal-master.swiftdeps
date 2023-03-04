@@ -1,0 +1,27 @@
+version: "Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)"
+options: "de41c592186957500f332067ede156a1e6bb435ef599c0eba1041d3f12f515a7"
+build_start_time: [1677861050, 607640027]
+build_end_time: [1677861067, 647135019]
+inputs:
+  ? "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Heartbeat.swift"
+  : [1677861022, 703193664]
+  ? "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatController.swift"
+  : [1677861022, 705017566]
+  ? "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatStorage.swift"
+  : [1677861022, 706309318]
+  ? "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsBundle.swift"
+  : [1677861022, 706769943]
+  ? "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/HeartbeatsPayload.swift"
+  : [1677861022, 707793712]
+  ? "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/RingBuffer.swift"
+  : [1677861022, 703804016]
+  ? "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/Storage.swift"
+  : [1677861022, 702356815]
+  ? "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/StorageFactory.swift"
+  : [1677861022, 708260297]
+  ? "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/WeakContainer.swift"
+  : [1677861022, 707185029]
+  ? "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatController.swift"
+  : [1677861022, 704420566]
+  ? "/Users/noyesamuel/Dev/MyFlutter_DemoApp/flutter_starter/macos/Pods/FirebaseCoreInternal/FirebaseCore/Internal/Sources/HeartbeatLogging/_ObjC_HeartbeatsPayload.swift"
+  : [1677861022, 705737590]
