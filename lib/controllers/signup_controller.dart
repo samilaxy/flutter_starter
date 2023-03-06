@@ -13,25 +13,26 @@ class SignupController extends GetxController {
   final email = TextEditingController();
   final password = TextEditingController();
   final comfirmPassword = TextEditingController();
-  String _errMessage = "";
-  String get errorMessage => _errMessage;
+  String errMessage = "";
+  String get errorMessage => errMessage;
   var isvalidated = false;
   //register user
   void registerUser(String email, String password) async {
-    // if (validation()) {
-    try {
-      await AuthRepository.instance
-          .createUserWithEmailAndPassword(email, password);
-      //  }
-    } on FirebaseAuthException catch (e) {
-      final ex = SignUpWithEmailAndPasswordFailure.code(e.code);
-      _errMessage = ex.message;
-      print('errorMessage - ${ex.message}');
-       throw ex;
-    } catch (_) {
-       const ex = SignUpWithEmailAndPasswordFailure();
-      print('FIREBASE AUTH EXCEPTION - ${ex.message}');
-      _errMessage = ex.message;
+    if (validation()) {
+      try {
+        await AuthRepository.instance
+            .createUserWithEmailAndPassword(email, password);
+      } on FirebaseAuthException catch (e) {
+        final ex = SignUpWithEmailAndPasswordFailure.code(e.code);
+        errMessage = ex.message;
+        update();
+        print('errorMessage - ${ex.message}');
+        throw ex;
+      } catch (_) {
+        const ex = SignUpWithEmailAndPasswordFailure();
+        print('FIREBASE AUTH EXCEPTION - ${ex.message}');
+        errMessage = ex.message;
+      }
     }
   }
 
@@ -49,14 +50,13 @@ class SignupController extends GetxController {
 
   bool validation() {
     if (email.text.isEmpty || password.text.isEmpty) {
-      _errMessage = "*complete all fields";
+      errMessage = "*complete all fields";
       return false;
     } else if (comfirmPassword.text != password.text) {
-      _errMessage = "*passwords mismatch";
+      errMessage = "*passwords mismatch";
       return false;
     } else {
       return true;
     }
-    print("message$errorMessage");
   }
 }
