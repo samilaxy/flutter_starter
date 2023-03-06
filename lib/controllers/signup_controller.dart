@@ -17,10 +17,10 @@ class SignupController extends GetxController {
   String get errorMessage => errMessage;
   var isvalidated = false;
   //register user
-  void registerUser(String email, String password) async {
+  void registerUser(String email, String password) {
     if (validation()) {
       try {
-        await AuthRepository.instance
+         AuthRepository.instance
             .createUserWithEmailAndPassword(email, password);
       } on FirebaseAuthException catch (e) {
         final ex = SignUpWithEmailAndPasswordFailure.code(e.code);
@@ -35,18 +35,6 @@ class SignupController extends GetxController {
       }
     }
   }
-
-  // void validation() {
-  //   if (email.text.isEmpty || password.text.isEmpty) {
-  //     errorMessage = "*complete all fields";
-  //     isvalidated = false;
-  //   } else if (comfirmPassword.text != password.text) {
-  //     errorMessage = "*passwords mismatch";
-  //     isvalidated = false;
-  //   } else {
-  //     isvalidated = true;
-  //   }
-  // }
 
   bool validation() {
     if (email.text.isEmpty || password.text.isEmpty) {

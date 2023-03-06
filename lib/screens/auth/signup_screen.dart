@@ -73,18 +73,21 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                           customTextField("Enter password", Icons.lock, true,
                               signUpcontroller.comfirmPassword),
-                              const SizedBox(
-                            height: 30,
-                          ),
-                              GetBuilder<SignupController>(
- builder: (newController) =>  Text(
-    "error ${newController.errMessage}",
-     textAlign: TextAlign.start,
-     style: const TextStyle(
-         fontSize: 22, fontWeight: FontWeight.bold),
-   ), ),
                           const SizedBox(
-                            height: 30,
+                            height: 10,
+                          ),
+                          GetBuilder<SignupController>(
+                            builder: (_) => Text(
+                              signUpcontroller.errMessage,
+                              textAlign: TextAlign.justify,
+                              style: const TextStyle(
+                                  fontSize: 12,
+                                  color: Colors.red,
+                                  fontWeight: FontWeight.bold),
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 20,
                           ),
                           Container(
                             width: MediaQuery.of(context).size.width,
@@ -144,13 +147,11 @@ class _SignupScreenState extends State<SignupScreen> {
 
   signup() {
     if (_formKey.currentState!.validate()) {
-     
       signUpcontroller.registerUser(signUpcontroller.email.text.trim(),
           signUpcontroller.password.text.trim());
-          setState(() {
-             print("hereeeeee: ${signUpcontroller.errMessage}");
-          });
-       
-      }
+      setState(() {
+        print("hereeeeee: ${signUpcontroller.errMessage}");
+      });
+    }
   }
 }
