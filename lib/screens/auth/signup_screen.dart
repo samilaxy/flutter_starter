@@ -3,6 +3,7 @@ import 'package:flutter_starter/controllers/signup_controller.dart';
 import 'package:flutter_starter/utils/color_utils.dart';
 import 'package:get/get.dart';
 import '../../shared/custom_widget.dart';
+import '../../shared/error_text.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -73,18 +74,14 @@ class _SignupScreenState extends State<SignupScreen> {
                           ),
                           customTextField("Enter password", Icons.lock, true,
                               signUpcontroller.comfirmPassword),
-                              const SizedBox(
-                            height: 30,
-                          ),
-                              GetBuilder<SignupController>(
- builder: (newController) =>  Text(
-    "error ${newController.errMessage}",
-     textAlign: TextAlign.start,
-     style: const TextStyle(
-         fontSize: 22, fontWeight: FontWeight.bold),
-   ), ),
                           const SizedBox(
-                            height: 30,
+                            height: 10,
+                          ),
+                          GetBuilder<SignupController>(
+                            builder: (_) => ErrText(controller: signUpcontroller)
+                          ),
+                          const SizedBox(
+                            height: 20,
                           ),
                           Container(
                             width: MediaQuery.of(context).size.width,
@@ -144,13 +141,11 @@ class _SignupScreenState extends State<SignupScreen> {
 
   signup() {
     if (_formKey.currentState!.validate()) {
-     
       signUpcontroller.registerUser(signUpcontroller.email.text.trim(),
           signUpcontroller.password.text.trim());
-          setState(() {
-             print("hereeeeee: ${signUpcontroller.errMessage}");
-          });
-       
-      }
+      setState(() {
+        print("hereeeeee: ${signUpcontroller.errMessage}");
+      });
+    }
   }
 }
