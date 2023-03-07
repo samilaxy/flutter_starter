@@ -3,6 +3,7 @@ import 'package:flutter_starter/controllers/signup_controller.dart';
 import 'package:flutter_starter/utils/color_utils.dart';
 import 'package:get/get.dart';
 import '../../shared/custom_widget.dart';
+import '../../shared/error_text.dart';
 
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
@@ -77,14 +78,7 @@ class _SignupScreenState extends State<SignupScreen> {
                             height: 10,
                           ),
                           GetBuilder<SignupController>(
-                            builder: (_) => Text(
-                              signUpcontroller.errMessage,
-                              textAlign: TextAlign.justify,
-                              style: const TextStyle(
-                                  fontSize: 12,
-                                  color: Colors.red,
-                                  fontWeight: FontWeight.bold),
-                            ),
+                            builder: (_) => ErrText(controller: signUpcontroller)
                           ),
                           const SizedBox(
                             height: 20,

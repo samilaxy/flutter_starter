@@ -8,10 +8,21 @@ class LoginController extends GetxController {
 //get data from textfields
   final email = TextEditingController();
   final password = TextEditingController();
-
+  String errMessage = "";
   //register user
   void loginUser(String email, String password) {
-     AuthRepository.instance.logineUserWithEmailAndPassword(email, password);
-   // authRepository.logineUserWithEmailAndPassword(email, password);
+    if (validation()) {
+      AuthRepository.instance.logineUserWithEmailAndPassword(email, password);
+    }
+    update();
+  }
+
+  bool validation() {
+    if (email.text.isEmpty || password.text.isEmpty) {
+      errMessage = "*complete all fields";
+      return false;
+    } else {
+      return true;
+    }
   }
 }

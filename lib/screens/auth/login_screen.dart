@@ -45,32 +45,47 @@ class _LoginScreenState extends State<LoginScreen> {
                       customTextField("Enter password", Icons.lock, true,
                           controller.password),
                       const SizedBox(
-                        height: 30,
+                        height: 10,
                       ),
-                     // padding: const EdgeInsets.only(top: 40, bottom: 20),
-                 // child: 
-                  Container(
-                     width: MediaQuery.of(context).size.width,
-      height: 50,
-      margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
-                    child: ElevatedButton(
-                        onPressed: login,
-                                 style: ButtonStyle(
-                              backgroundColor: MaterialStateColor.resolveWith((states) {
-                                if (states.contains(MaterialState.pressed)) {
+                      GetBuilder<LoginController>(
+                        builder: (_) => Text(
+                          controller.errMessage,
+                          textAlign: TextAlign.start,
+                          style: const TextStyle(
+                              fontSize: 12,
+                              color: Colors.red,
+                              fontWeight: FontWeight.normal),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 20,
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width,
+                        height: 50,
+                        margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
+                        child: ElevatedButton(
+                            onPressed: login,
+                            style: ButtonStyle(
+                                backgroundColor:
+                                    MaterialStateColor.resolveWith((states) {
+                                  if (states.contains(MaterialState.pressed)) {
+                                    return Colors.black87;
+                                  }
                                   return Colors.black87;
-                                }
-                                return Colors.black87;
-                              }),
-                              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                                  RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(30)))),
-                       // color: Colors.black26,
-                        child: const Text('Login',
-                            style: TextStyle(
-                                color: Colors.white60, fontWeight: FontWeight.bold, fontSize: 16))
-                                ),
-                  ),
+                                }),
+                                shape: MaterialStateProperty.all<
+                                        RoundedRectangleBorder>(
+                                    RoundedRectangleBorder(
+                                        borderRadius:
+                                            BorderRadius.circular(30)))),
+                            // color: Colors.black26,
+                            child: const Text('Login',
+                                style: TextStyle(
+                                    color: Colors.white60,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 16))),
+                      ),
                       loginOption(),
                       const SizedBox(
                         height: 30,
@@ -100,8 +115,10 @@ class _LoginScreenState extends State<LoginScreen> {
 
   login() {
     // Navigator.pushNamed(context,"/signup");
-    print("object: " + controller.email.text.trim() + controller.password.text.trim());
-     LoginController.instance
-       .loginUser(controller.email.text.trim(), controller.password.text.trim());
+    print("object: " +
+        controller.email.text.trim() +
+        controller.password.text.trim());
+    LoginController.instance.loginUser(
+        controller.email.text.trim(), controller.password.text.trim());
   }
 }
