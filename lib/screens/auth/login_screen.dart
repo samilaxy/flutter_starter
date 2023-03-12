@@ -3,6 +3,7 @@ import 'package:flutter_starter/controllers/login_controller.dart';
 import 'package:flutter_starter/utils/color_utils.dart';
 import 'package:get/get.dart';
 import '../../shared/custom_widget.dart';
+import '../../shared/error_text.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -15,9 +16,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final controller = Get.put(LoginController());
   final _formKey = GlobalKey<FormState>();
 
-  final TextEditingController passwordTxt = TextEditingController();
-  // final TextEditingController emailTxt = TextEditingController();
-  // final TextEditingController passwordTxt = TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,15 +46,8 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 10,
                       ),
                       GetBuilder<LoginController>(
-                        builder: (_) => Text(
-                          controller.errMessage,
-                          textAlign: TextAlign.start,
-                          style: const TextStyle(
-                              fontSize: 12,
-                              color: Colors.red,
-                              fontWeight: FontWeight.normal),
-                        ),
-                      ),
+                            builder: (_) => const ErrText(controller: LoginController)
+                          ),
                       const SizedBox(
                         height: 20,
                       ),
