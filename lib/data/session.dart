@@ -12,4 +12,13 @@ Session.fromJson(Map<String, dynamic> sessionMap){
   description = sessionMap['description'] ?? "";
   duration = sessionMap['duration'] ?? 0;
 }
+
+ Map<String, dynamic> toJson(){
+  return{
+    'id': id,
+    'date': date,
+    'description': description,
+    'duration': duration,
+  };
+ }
 }
