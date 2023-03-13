@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_starter/screens/auth/login_screen.dart';
+import 'package:flutter_starter/screens/sessions_screen.dart';
 import 'package:flutter_starter/screens/weather_screen.dart';
 import '../repository/auth_repository.dart';
 import '../screens/bmi_screen.dart';
@@ -26,6 +26,7 @@ class MenuDrawer extends StatelessWidget {
       'Weather',
       'Training',
       'Workouts Todo',
+      'Sessions',
       'Log Out'
     ];
     List<Widget> menuItems = [];
@@ -48,6 +49,9 @@ class MenuDrawer extends StatelessWidget {
               break;
             case 'Weather':
               screen = const WeatherScreen();
+              break;
+            case 'Sessions':
+              screen = const SessionsScreen();
               break;
             case 'Workouts Todo':
               screen = const TodoScreen();
