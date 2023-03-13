@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_starter/repository/auth_repository.dart';
 import 'package:flutter_starter/screens/bmi_screen.dart';
+import 'package:flutter_starter/screens/sessions_screen.dart';
 import 'package:flutter_starter/screens/weather_screen.dart';
 import 'package:get/get.dart';
 import 'screens/intro_screen.dart';
@@ -34,6 +35,7 @@ class MyMancho extends StatelessWidget {
           '/signup': (context) => const SignupScreen(),
           '/intro': (context) => const IntroScreen(),
           '/weather': (context) => const WeatherScreen(),
+          '/sessions': (context) => const SessionsScreen(),
           '/bmi': (context) => const BmiScreen(),
         },
       //  initialRoute: '/'
