@@ -13,7 +13,7 @@ class BmiScreen extends StatefulWidget {
 }
 
 class _BmiScreenState extends State<BmiScreen> {
-    final bmiController = Get.put(BmiController());
+  final bmiController = Get.put(BmiController());
   final TextEditingController txtHeight = TextEditingController();
   final TextEditingController txtWeight = TextEditingController();
   final double fontSize = 18;
@@ -26,19 +26,20 @@ class _BmiScreenState extends State<BmiScreen> {
   late bool validate = false;
   String heightMessage = '';
   String weightMessage = '';
-  @override
-  void initState() {
-    // validate = true;
-    isSelected = [isMetric, isImperial];
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   // validate = true;
+  //   isSelected = bmiController.isSelected;
+  //   // isSelected = [isMetric, isImperial];
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {
     heightMessage =
-        'Please input your height ${(isMetric) ? 'meters' : 'inches'}';
+        'Please input your height ${(bmiController.isMetric) ? 'meters' : 'inches'}';
     weightMessage =
-        'Please input your weight ${(isMetric) ? 'kilos' : 'pounds'}';
+        'Please input your weight ${(bmiController.isMetric) ? 'kilos' : 'pounds'}';
     return Scaffold(
         appBar: AppBar(
           title: const Text('BMI Calculator',
@@ -52,30 +53,31 @@ class _BmiScreenState extends State<BmiScreen> {
             padding: const EdgeInsets.all(40.0),
             child: Column(
               children: [
-                ToggleButtons(children: [
+                ToggleButtons(isSelected: bmiController.isSelected, onPressed: toggleMeasure, children: [
                   Padding(
                       padding:
-                          EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+                          const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                       child:
                           Text('Metric', style: TextStyle(fontSize: fontSize))),
                   Padding(
-                      padding: EdgeInsets.symmetric(horizontal: 16),
+                      padding: const EdgeInsets.symmetric(horizontal: 16),
                       child: Text('Imperial',
                           style: TextStyle(fontSize: fontSize)))
-                ], isSelected: isSelected, onPressed: toggleMeasure),
+                ]),
                 Padding(
-                  padding: EdgeInsets.only(top: 40),
+                  padding: const EdgeInsets.only(top: 40),
                   child: TextField(
-                    controller: txtHeight,
+                    controller: bmiController.height,
+                    //txtHeight,
                     keyboardType: TextInputType.number,
                     decoration: InputDecoration(
                         hintText: heightMessage, fillColor: Colors.black),
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.symmetric(vertical: 20),
+                  padding: const EdgeInsets.symmetric(vertical: 20),
                   child: TextField(
-                      controller: 
+                      controller: bmiController.weight,
                       //txtWeight,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
@@ -92,10 +94,12 @@ class _BmiScreenState extends State<BmiScreen> {
                           style: TextStyle(
                               fontSize: fontSize, color: Colors.black87))),
                 ),
-                Text(
-                  result,
-                  style: TextStyle(color: validate ? Colors.black : Colors.red),
+               GetBuilder<BmiController>(
+                            builder: (_) =>  Text(bmiController.validation() ?
+                  bmiController.findBMI(): bmiController.errMessage,
+                  style: TextStyle(color: bmiController.validation() ? Colors.black : Colors.red),
                 )
+            )
               ],
             ),
           ),
@@ -104,51 +108,46 @@ class _BmiScreenState extends State<BmiScreen> {
 
   void toggleMeasure(value) {
     if (value == 0) {
-      isMetric = true;
-      isImperial = false;
+      bmiController.isMetric = true;
+      bmiController.isImperial = false;
     } else {
-      isMetric = false;
-      isImperial = true;
+      bmiController.isMetric = false;
+      bmiController.isImperial = true;
     }
     setState(() {
-      isSelected = [isMetric, isImperial];
+      bmiController.isSelected = [
+        bmiController.isMetric,
+        bmiController.isImperial
+      ];
     });
   }
 
   void findBMI() {
     bmiController.findBMI();
-  //   double bmi = 0;
-  //   double height = double.tryParse(txtHeight.text) ?? 0;
-  //   double weight = double.tryParse(txtWeight.text) ?? 0;
+    print("error1 "+bmiController.errMessage);
+    //   double bmi = 0;
+    //   double height = double.tryParse(txtHeight.text) ?? 0;
+    //   double weight = double.tryParse(txtWeight.text) ?? 0;
 
-  //   if (isMetric) {
-  //     bmi = weight / (height * height);
-  //   } else {
-  //     bmi = weight * 703 / (height * height);
-  //   }
+    //   if (isMetric) {
+    //     bmi = weight / (height * height);
+    //   } else {
+    //     bmi = weight * 703 / (height * height);
+    //   }
 
-  //   setState(() {
-  //     if (txtWeight.text.isEmpty || txtHeight.text.isEmpty) {
-  //       validate == false;
-  //       result = 'Fields Can\'t Be Empty';
-  //     } else {
-  //       validate == true;
-  //       result = 'Your BMI is ${bmi.toStringAsFixed(2)}';
-  //     }
-  //     const DialogExample();
-  //   });
-  //   print('validate state: ${validate}');
-  // }
+    //   setState(() {
+    //     if (txtWeight.text.isEmpty || txtHeight.text.isEmpty) {
+    //       validate == false;
+    //       result = 'Fields Can\'t Be Empty';
+    //     } else {
+    //       validate == true;
+    //       result = 'Your BMI is ${bmi.toStringAsFixed(2)}';
+    //     }
+    //     const DialogExample();
+    //   });
+    //   print('validate state: ${validate}');
+  }
 }
-
-/*
-if (Platform.isAndroid) {
-  return ElevatedButton(onPressed: onPressed, child: child);
-} else if (Platform.isIOS) {
-  return CupertinoButton.filled(onPressed: onPressed, child: child);
-}
-
-*/
 
 class DialogExample extends StatelessWidget {
   const DialogExample({super.key});
