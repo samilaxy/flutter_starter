@@ -46,7 +46,14 @@ class _LoginScreenState extends State<LoginScreen> {
                         height: 10,
                       ),
                       GetBuilder<LoginController>(
-                            builder: (_) => const ErrText(controller: LoginController)
+                            builder: (_) => Text(
+      controller.errMessage,
+      textAlign: TextAlign.start,
+      style: const TextStyle(
+          fontSize: 12,
+          color: Colors.red,
+          fontWeight: FontWeight.normal),
+    )
                           ),
                       const SizedBox(
                         height: 20,

@@ -18,7 +18,7 @@
 		</data>
 		<key>flutter_assets/NOTICES.Z</key>
 		<data>
-		ro/fsm4/p7klYQ8syhdS+wCT46g=
+		HE1smptSQTeD8GUZsXOu7mSZfOc=
 		</data>
 		<key>flutter_assets/assets/.DS_Store</key>
 		<data>
@@ -88,29 +88,9 @@
 		<data>
 		LMA+8KshM2femqMsUH7w2kSpFBM=
 		</data>
-		<key>flutter_assets/assets/Logoimages.png</key>
-		<data>
-		uaTyBeegQQe6LxRJCbG08uVzJOg=
-		</data>
-		<key>flutter_assets/assets/backCloud.jpg</key>
-		<data>
-		upIfCYhfX2/yv3Pr+zcXDim3I2Y=
-		</data>
-		<key>flutter_assets/assets/boby.png</key>
-		<data>
-		cEI5ThxMc96qQplmXlnWcD6pvEE=
-		</data>
-		<key>flutter_assets/assets/cloud.jpeg</key>
-		<data>
-		/52e41EIaibC6sLUcHTH1jPZOMY=
-		</data>
 		<key>flutter_assets/assets/cloud1.avif</key>
 		<data>
 		DR+GU0i2W9h2th4opijczFZYttE=
-		</data>
-		<key>flutter_assets/assets/fitness.png</key>
-		<data>
-		mW2/YejJAAoaC24kTvE6Dcyw1Vg=
 		</data>
 		<key>flutter_assets/assets/iconweather.png</key>
 		<data>
@@ -132,10 +112,6 @@
 		<data>
 		czFVk1WfIYAYPbvC2Ote50FNsqg=
 		</data>
-		<key>flutter_assets/assets/weather.avif</key>
-		<data>
-		vtxu+/RzJLCRAZMf5EkzNP5cs6U=
-		</data>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<data>
 		/CUoTuPQqqdexfyOT9lpJhV+2MQ=
@@ -146,7 +122,7 @@
 		</data>
 		<key>flutter_assets/kernel_blob.bin</key>
 		<data>
-		xvxxj4Od0O06tI8crn0R2czEDlM=
+		ji4od33XdZgZpY8mpwRfq22QdRU=
 		</data>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>
 		<data>
@@ -193,7 +169,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			RgUEeZbKsODqld2m3S7eLfutGosPPQu4EnXaQ/ZjuqY=
+			PM8bP/RYyPbOJS47BHPJzG0t6Zyrk4gIKiN4VDHXvgY=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/HatchfulExport-All/facebook_cover_photo_1.png</key>
@@ -308,46 +284,11 @@
 			GplH0+ig1XYXn4Jt3zXRuhKc7AbYhg249i7mgbgrwHU=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/Logoimages.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			+2tyQfDIFG3JJi4/QfzOCWo3lc2lNart0maQtFxelrA=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/backCloud.jpg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			EqRg2teS2XKe81iP1rwvZzI0Pdi2zcEk70f/yKfHHxE=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/boby.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			iYytu+u1HR5OTWNWodY2sehlHclv3IevtQWD9r9vum0=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/cloud.jpeg</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			BoQpUApQPdI+YMYtg9ocDoyCM7MeiNTadbtRG0ya4DI=
-			</data>
-		</dict>
 		<key>flutter_assets/assets/cloud1.avif</key>
 		<dict>
 			<key>hash2</key>
 			<data>
 			0WB+EAXBLzEmpSqqxIJbFYZVtnYd5E6yBb7E0LQ8zlQ=
-			</data>
-		</dict>
-		<key>flutter_assets/assets/fitness.png</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			A196gc300SAtNfwmE8odGYwHTaDUVKsBJbd5KvDUaJA=
 			</data>
 		</dict>
 		<key>flutter_assets/assets/iconweather.png</key>
@@ -385,13 +326,6 @@
 			AfczbgZOjVXc/KGLpqdbIp3vuoyeaxW1TERxlAeSFGM=
 			</data>
 		</dict>
-		<key>flutter_assets/assets/weather.avif</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			4hZHbdl0cgiQiyH+O7jdkEcHBATD3Xf2CY+Xb/QaQTM=
-			</data>
-		</dict>
 		<key>flutter_assets/fonts/MaterialIcons-Regular.otf</key>
 		<dict>
 			<key>hash2</key>
@@ -410,7 +344,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			9/Lei0FqSUodYTn62TaxdKpcEVa/85zDJBdb/AYqy0E=
+			AucHfrpZ7RklD/6oUizfZ3H3eqbxiCDbKjaDr/nL0d4=
 			</data>
 		</dict>
 		<key>flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf</key>

@@ -12,8 +12,18 @@ class SessionsScreen extends StatefulWidget {
 }
 
 class _SessionsScreenState extends State<SessionsScreen> {
+  List<Session> sessions = [];
   final TextEditingController txtdescription = TextEditingController();
   final TextEditingController txtduration = TextEditingController();
+  final SPHelper helper = SPHelper();
+  @override
+  void initState() {
+    helper.inti().then((value) => {
+      updateScreen()
+    });
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,16 +34,12 @@ class _SessionsScreenState extends State<SessionsScreen> {
       ),
       drawer: const MenuDrawer(),
       bottomNavigationBar: const MenuBottom(),
-      body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.all(40.0),
-          child: Column(
-            children: [],
-          ),
-        ),
-      ),
+      body: 
+       ListView(children: getContent()),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          showMessageDialog(context);
+        },
         backgroundColor: Colors.grey,
         child: const Icon(Icons.add),
       ),
@@ -64,14 +70,38 @@ class _SessionsScreenState extends State<SessionsScreen> {
                     txtduration.text = '';
                   },
                   child: const Text('Cancel')),
-                  ElevatedButton(
-                  onPressed:saveSession,
-                  child: const Text('Save'))
+              ElevatedButton(onPressed: saveSession, child: const Text('Save'))
             ],
           );
         });
   }
 
-  Future saveSession()  async{
+  Future saveSession() async {
+    DateTime now = DateTime.now();
+    String today = '${now.year}-${now.month}-${now.day}';
+    Session newSession = Session(
+        1, today, txtdescription.text, int.tryParse(txtduration.text) ?? 0);
+    helper.writeSession(newSession);
+    Navigator.pop(context);
+    txtdescription.text = '';
+    txtduration.text = '';
+  }
+
+  List<Widget> getContent() {
+    List<Widget> tiles = [];
+    sessions.forEach((session) {
+      tiles.add(ListTile(
+        title: Text(session.description),
+        subtitle: Text('${session.date} - duration: ${session.duration} min'),
+      ));
+    });
+    return tiles;
+  }
+
+  void updateScreen() {
+    sessions = helper.getSessions();
+    setState(() {
+      
+    });
   }
 }
