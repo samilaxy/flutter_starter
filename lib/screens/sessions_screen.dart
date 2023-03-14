@@ -3,6 +3,7 @@ import '../data/session.dart';
 import '../data/sp_helper.dart';
 import '../shared/menu_drawer.dart';
 import '../shared/menu_bottom.dart';
+import 'package:lil_auto_increment/lil_auto_increment.dart';
 
 class SessionsScreen extends StatefulWidget {
   const SessionsScreen({super.key});
@@ -16,11 +17,10 @@ class _SessionsScreenState extends State<SessionsScreen> {
   final TextEditingController txtdescription = TextEditingController();
   final TextEditingController txtduration = TextEditingController();
   final SPHelper helper = SPHelper();
+  final Id nextId1 = autoIncrement();
   @override
   void initState() {
-    helper.inti().then((value) => {
-      updateScreen()
-    });
+    helper.inti().then((value) => {updateScreen()});
     super.initState();
   }
 
@@ -34,8 +34,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
       ),
       drawer: const MenuDrawer(),
       bottomNavigationBar: const MenuBottom(),
-      body: 
-       ListView(children: getContent()),
+      body: ListView(children: getContent()),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           showMessageDialog(context);
@@ -80,7 +79,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
     DateTime now = DateTime.now();
     String today = '${now.year}-${now.month}-${now.day}';
     Session newSession = Session(
-        1, today, txtdescription.text, int.tryParse(txtduration.text) ?? 0);
+       int.tryParse(nextId1.toString()) ?? 0, today, txtdescription.text, int.tryParse(txtduration.text) ?? 0);
     helper.writeSession(newSession);
     Navigator.pop(context);
     txtdescription.text = '';
@@ -95,13 +94,12 @@ class _SessionsScreenState extends State<SessionsScreen> {
         subtitle: Text('${session.date} - duration: ${session.duration} min'),
       ));
     });
+    print('tiles: ${tiles}');
     return tiles;
   }
 
   void updateScreen() {
     sessions = helper.getSessions();
-    setState(() {
-      
-    });
+    setState(() {});
   }
 }

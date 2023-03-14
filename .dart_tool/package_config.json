@@ -176,6 +176,12 @@
       "languageVersion": "2.16"
     },
     {
+      "name": "lil_auto_increment",
+      "rootUri": "file:///Users/noyesamuel/.pub-cache/hosted/pub.dev/lil_auto_increment-1.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "lints",
       "rootUri": "file:///Users/noyesamuel/.pub-cache/hosted/pub.dev/lints-2.0.1",
       "packageUri": "lib/",
@@ -374,7 +380,7 @@
       "languageVersion": "2.18"
     }
   ],
-  "generated": "2023-03-12T09:12:32.835310Z",
+  "generated": "2023-03-14T09:52:32.182688Z",
   "generator": "pub",
   "generatorVersion": "2.19.0"
 }
