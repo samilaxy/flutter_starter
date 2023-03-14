@@ -1,3 +1,6 @@
+import 'dart:ffi';
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import '../data/session.dart';
 import '../data/sp_helper.dart';
@@ -17,12 +20,16 @@ class _SessionsScreenState extends State<SessionsScreen> {
   final TextEditingController txtdescription = TextEditingController();
   final TextEditingController txtduration = TextEditingController();
   final SPHelper helper = SPHelper();
-  final Id nextId1 = autoIncrement();
+
   @override
   void initState() {
-    helper.inti().then((value) => {updateScreen()});
     super.initState();
+    helper.inti().then((value) {
+      updateScreen();
+    });
   }
+
+  // int? id = int.tryParse(Random().nextInt(100) as String);
 
   @override
   Widget build(BuildContext context) {
@@ -55,7 +62,7 @@ class _SessionsScreenState extends State<SessionsScreen> {
                 child: Column(children: [
               TextField(
                   controller: txtdescription,
-                  decoration: const InputDecoration(hintText: 'description')),
+                  decoration: const InputDecoration(hintText: 'Description')),
               TextField(
                 controller: txtduration,
                 decoration: const InputDecoration(hintText: 'Duration'),
@@ -77,10 +84,15 @@ class _SessionsScreenState extends State<SessionsScreen> {
 
   Future saveSession() async {
     DateTime now = DateTime.now();
+    int id = helper.getCounter() + 1;
     String today = '${now.year}-${now.month}-${now.day}';
+
     Session newSession = Session(
-       int.tryParse(nextId1.toString()) ?? 0, today, txtdescription.text, int.tryParse(txtduration.text) ?? 0);
-    helper.writeSession(newSession);
+        id, today, txtdescription.text, int.tryParse(txtduration.text) ?? 0);
+    helper.writeSession(newSession).then((_) {
+      updateScreen();
+      helper.setCounter();
+    });
     Navigator.pop(context);
     txtdescription.text = '';
     txtduration.text = '';
@@ -89,17 +101,26 @@ class _SessionsScreenState extends State<SessionsScreen> {
   List<Widget> getContent() {
     List<Widget> tiles = [];
     sessions.forEach((session) {
-      tiles.add(ListTile(
-        title: Text(session.description),
-        subtitle: Text('${session.date} - duration: ${session.duration} min'),
+      tiles.add(Dismissible(
+        key: UniqueKey(),
+        onDismissed: (_) {
+          helper.deleteSession(session.id).then((value) {
+            updateScreen();
+          });
+        },
+        child: ListTile(
+          title: Text(session.description),
+          subtitle: Text('${session.date} - duration: ${session.duration} min'),
+        ),
       ));
     });
-    print('tiles: ${tiles}');
     return tiles;
   }
 
   void updateScreen() {
     sessions = helper.getSessions();
-    setState(() {});
+    setState(() {
+      print('sessions:${sessions}');
+    });
   }
 }
