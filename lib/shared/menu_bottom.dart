@@ -23,16 +23,15 @@ class MenuBottom extends StatelessWidget {
               break;
           }
         },
-        items: [
+        items: const [
           // ignore: prefer_const_constructors
           BottomNavigationBarItem(
               activeIcon: Icon(
                 Icons.home_rounded,
                 color: Colors.white54,
               ),
-              icon: const Icon(Icons.home_rounded),
+              icon: Icon(Icons.home_rounded),
               label: 'Home'),
-
           BottomNavigationBarItem(
               activeIcon: Icon(
                 Icons.home_rounded,

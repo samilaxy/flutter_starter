@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_starter/controllers/bmi_controller.dart';
 import 'package:flutter_starter/shared/menu_bottom.dart';
 import 'package:flutter_starter/shared/menu_drawer.dart';
-import 'package:flutter_platform_widgets/flutter_platform_widgets.dart';
 import 'package:get/get.dart';
 
 class BmiScreen extends StatefulWidget {
@@ -16,14 +15,7 @@ class _BmiScreenState extends State<BmiScreen> {
   final bmiController = Get.put(BmiController());
   final TextEditingController txtHeight = TextEditingController();
   final TextEditingController txtWeight = TextEditingController();
-  final double fontSize = 18;
   String result = '';
-  bool isMetric = true;
-  bool isImperial = false;
-  double? heighgt;
-  double? weight;
-  late List<bool> isSelected;
-  late bool validate = false;
   String heightMessage = '';
   String weightMessage = '';
   // @override
@@ -53,53 +45,87 @@ class _BmiScreenState extends State<BmiScreen> {
             padding: const EdgeInsets.all(40.0),
             child: Column(
               children: [
-                ToggleButtons(isSelected: bmiController.isSelected, onPressed: toggleMeasure, children: [
-                  Padding(
-                      padding:
-                          const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-                      child:
-                          Text('Metric', style: TextStyle(fontSize: fontSize))),
-                  Padding(
-                      padding: const EdgeInsets.symmetric(horizontal: 16),
-                      child: Text('Imperial',
-                          style: TextStyle(fontSize: fontSize)))
-                ]),
+                ToggleButtons(
+                    isSelected: bmiController.isSelected,
+                    onPressed: toggleMeasure,
+                    children: [
+                      Padding(
+                          padding: const EdgeInsets.symmetric(
+                              horizontal: 16, vertical: 10),
+                          child: Text('Metric',
+                              style: TextStyle(fontSize: fontSize))),
+                      Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 16),
+                          child: Text('Imperial',
+                              style: TextStyle(fontSize: fontSize)))
+                    ]),
                 Padding(
                   padding: const EdgeInsets.only(top: 40),
                   child: TextField(
-                    controller: bmiController.height,
-                    //txtHeight,
-                    keyboardType: TextInputType.number,
-                    decoration: InputDecoration(
-                        hintText: heightMessage, fillColor: Colors.black),
-                  ),
+                      controller: bmiController.height,
+                      //txtHeight,
+                      keyboardType: TextInputType.number,
+                      decoration: InputDecoration(
+                          hintText: heightMessage,
+                          fillColor: Colors.black,
+                          focusedBorder: const UnderlineInputBorder(
+                              borderSide:
+                                  BorderSide(color: Colors.grey, width: 1.5)))),
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(vertical: 20),
                   child: TextField(
                       controller: bmiController.weight,
-                      //txtWeight,
                       keyboardType: TextInputType.number,
                       decoration: InputDecoration(
                         hintText: weightMessage,
-                        // errorText: validate ? null : 'Fields Can\'t Be Empty'
+                        focusedBorder: const UnderlineInputBorder(
+                            borderSide:
+                                BorderSide(color: Colors.grey, width: 1.5)),
+                        //  errorText: bmiController.validate ? null : 'Fields Can\'t Be Empty'
                       )),
                 ),
+                GetBuilder<BmiController>(
+                    builder: (_) => Text(
+                          bmiController.validate
+                              ? ''
+                              : bmiController.errMessage,
+                             // textAlign ,
+                          style:
+                              const TextStyle(color: Colors.red, fontSize: 12),
+                        )),
                 Padding(
-                  padding: const EdgeInsets.only(top: 40, bottom: 20),
-                  child: PlatformElevatedButton(
-                      onPressed: findBMI,
-                      color: Colors.black26,
-                      child: Text('Calculate BMI',
-                          style: TextStyle(
-                              fontSize: fontSize, color: Colors.black87))),
+                  padding: const EdgeInsets.only(top: 20, bottom: 20),
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    height: 50,
+                    margin: const EdgeInsets.fromLTRB(0, 10, 0, 20),
+                    child: ElevatedButton(
+                        onPressed: findBMI,
+                        style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateColor.resolveWith((states) {
+                              if (states.contains(MaterialState.pressed)) {
+                                return Colors.blueGrey;
+                              }
+                              return Colors.grey;
+                            }),
+                            shape: MaterialStateProperty.all<
+                                    RoundedRectangleBorder>(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30)))),
+                        child: const Text('Find BMI',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                                fontSize: 16))),
+                  ),
                 ),
-               GetBuilder<BmiController>(
-                            builder: (_) =>  Text(bmiController.validation() ?
-                  bmiController.findBMI(): bmiController.errMessage,
-                  style: TextStyle(color: bmiController.validation() ? Colors.black : Colors.red),
-                )
-            )
+                GetBuilder<BmiController>(
+                    builder: (_) => Text(
+                          bmiController.validate ? result : "",
+                          style: TextStyle(color: Colors.black, fontSize: 20),
+                        ))
               ],
             ),
           ),
@@ -123,29 +149,7 @@ class _BmiScreenState extends State<BmiScreen> {
   }
 
   void findBMI() {
-    bmiController.findBMI();
-    print("error1 "+bmiController.errMessage);
-    //   double bmi = 0;
-    //   double height = double.tryParse(txtHeight.text) ?? 0;
-    //   double weight = double.tryParse(txtWeight.text) ?? 0;
-
-    //   if (isMetric) {
-    //     bmi = weight / (height * height);
-    //   } else {
-    //     bmi = weight * 703 / (height * height);
-    //   }
-
-    //   setState(() {
-    //     if (txtWeight.text.isEmpty || txtHeight.text.isEmpty) {
-    //       validate == false;
-    //       result = 'Fields Can\'t Be Empty';
-    //     } else {
-    //       validate == true;
-    //       result = 'Your BMI is ${bmi.toStringAsFixed(2)}';
-    //     }
-    //     const DialogExample();
-    //   });
-    //   print('validate state: ${validate}');
+    result = bmiController.findBMI();
   }
 }
 

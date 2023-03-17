@@ -54,16 +54,16 @@ class _WeatherScreenState extends State<WeatherScreen> {
                       controller: txtPlace,
                       decoration: InputDecoration(
                           hintText: 'Enter city..',
-                          contentPadding: EdgeInsets.symmetric(
+                          contentPadding: const EdgeInsets.symmetric(
                               vertical: 10.0, horizontal: 20),
-                          labelStyle: TextStyle(color: Colors.white60),
-                          hintStyle: TextStyle(color: Colors.white54),
+                          labelStyle: const TextStyle(color: Colors.white60),
+                          hintStyle: const TextStyle(color: Colors.white54),
                           focusedBorder: OutlineInputBorder(
-                              borderRadius: new BorderRadius.circular(25.0),
+                              borderRadius: BorderRadius.circular(25.0),
                               borderSide: const BorderSide(
                                   color: Colors.white38, width: 2.0)),
                           enabledBorder: OutlineInputBorder(
-                              borderRadius: new BorderRadius.circular(25.0),
+                              borderRadius: BorderRadius.circular(25.0),
                               borderSide: const BorderSide(
                                   color: Colors.white38, width: 2.0)),
                           border: OutlineInputBorder(
