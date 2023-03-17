@@ -24,9 +24,8 @@ class MenuDrawer extends StatelessWidget {
       'Home',
       'BMI Calculator',
       'Weather',
-      'Training',
+      'Trainings',
       'Workouts Todo',
-      'Sessions',
       'Log Out'
     ];
     List<Widget> menuItems = [];
@@ -50,7 +49,7 @@ class MenuDrawer extends StatelessWidget {
             case 'Weather':
               screen = const WeatherScreen();
               break;
-            case 'Sessions':
+            case 'Trainings':
               screen = const SessionsScreen();
               break;
             case 'Workouts Todo':
